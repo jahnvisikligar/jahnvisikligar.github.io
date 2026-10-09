@@ -5,8 +5,8 @@
     --paper: #fbf9f4;
     --ink: #1c1b19;
     --muted: #706b63;
-    --wine: #4a2631;
-    --wine-soft: #6f4a54;
+    --blue: #36536F;
+    --blue-soft: #607484;
     --line: rgba(28, 27, 25, 0.16);
     --white-line: rgba(255, 255, 255, 0.24);
 }
@@ -86,7 +86,7 @@ a {
 
 .nav-links a:hover {
     color: var(--wine);
-    background: rgba(74, 38, 49, 0.035);
+    background: rgba(54, 83, 111, 0.035);
 }
 
 .nav-links a:hover::after {
@@ -251,7 +251,7 @@ a {
     font-size: clamp(150px, 20vw, 280px);
     font-weight: 600;
     line-height: 0.8;
-    color: rgba(74, 38, 49, 0.045);
+    color: rgba(54, 83, 111, 0.045);
     pointer-events: none;
 }
 
