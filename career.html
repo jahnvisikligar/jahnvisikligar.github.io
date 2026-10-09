@@ -7,7 +7,14 @@
     <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
     <link rel="stylesheet" href="css/styles.css?v=6">
     <style>
-        .site-header .navbar { justify-content: space-between; }
+        .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
+        .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
+        .site-header .nav-links a { white-space: nowrap; }
+        .career-entry-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+        .career-title-group { min-width: 0; }
+        .career-title-group .career-company { margin: 3px 0 0; }
+        .career-title-group .career-location { margin: 3px 0 0; }
+        .career-title-group .career-company + .career-location { margin-top: 3px; }
         .site-brand {
             color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
             font-size: 21px; letter-spacing: .1em; white-space: nowrap;
@@ -65,19 +72,28 @@
         .career-entry:not(:last-child) .career-marker::after { content: ""; width: 1px; flex: 1; min-height: 30px; background: rgba(28,27,25,.2); }
         .career-entry-content { padding: 0 0 38px; }
         .career-entry:last-child .career-entry-content { padding-bottom: 0; }
-        .career-entry-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+        
         .career-entry h3 { margin: 0; color: #263e5b; font-size: 20px; line-height: 1.35; font-weight: 600; }
         .career-dates { color: var(--blue-soft); font-size: 11px; line-height: 1.5; font-weight: 600; white-space: nowrap; text-align: right; }
-        .career-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 150px; }
+        .career-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 150px; flex: 0 0 auto; }
         .career-meta .career-location { margin: 0; text-align: right; }
-        .career-company { margin: 6px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; }
+        .career-company { margin: 3px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; }
         .career-location { margin: 4px 0 14px; color: var(--muted); font-size: 12px; }
         .career-description { max-width: 760px; margin: 0; color: #48443e; font-size: 14px; line-height: 1.85; }
         .career-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 26px; }
         .education-entry { padding: 0 0 28px; }
         .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
         .education-entry:last-child { padding-bottom: 0; }
+        @media (max-width: 900px) {
+            .site-header .navbar { gap: 18px; }
+            .site-header .nav-links { gap: 16px; }
+            .site-brand { font-size: 17px; }
+        }
         @media (max-width: 760px) {
+            .site-header .navbar { flex-wrap: wrap; }
+            .site-header .nav-links { width: 100%; justify-content: space-between; gap: 10px; }
+            .site-header .nav-links a { font-size: 10px; }
+
             .site-brand { font-size: 16px; letter-spacing: .07em; }
             .career-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
             .career-footer-links { justify-content: flex-start; gap: 14px; }
@@ -90,7 +106,9 @@
             .career-main { padding: 52px 24px; }
             .career-section + .career-section { margin-top: 58px; }
             .career-entry { grid-template-columns: 14px minmax(0,1fr); column-gap: 13px; }
-            .career-entry-head { display: block; }
+            .career-entry-head { display: flex; flex-direction: column; gap: 2px; }
+            .career-meta { align-items: flex-start; margin-top: 3px; }
+            .career-meta .career-location { text-align: left; }
             .career-dates { display: block; text-align: left; margin-top: 5px; }
             .career-meta { align-items: flex-start; margin-top: 5px; }
             .career-meta .career-location { text-align: left; }
@@ -131,10 +149,9 @@
                         <div class="career-marker" aria-hidden="true"></div>
                         <div class="career-entry-content">
                             <div class="career-entry-head">
-                                <h3>Data Scientist</h3>
+                                <div class="career-title-group"><h3>Data Scientist</h3><p class="career-company">First Living Spaces Pvt. Ltd. (sirrus.ai)</p></div>
                                 <div class="career-meta"><span class="career-dates">Mar 2025 – Aug 2026</span><span class="career-location">Mumbai, India</span></div>
                             </div>
-                            <p class="career-company">First Living Spaces Pvt. Ltd. (sirrus.ai)</p>
                             <p class="career-description">Develops multimodal AI solutions for real-estate content and document workflows. Built an LLM-driven brochure-personalization pipeline that adapts copy for seven buyer personas, alongside contextual image replacement across 12 semantic categories while preserving PDF structure and layout. Contributed to vision-language workflows for understanding architectural floor plans and an ASR–LLM–TTS pipeline.</p>
                         </div>
                     </article>
@@ -143,10 +160,9 @@
                         <div class="career-marker" aria-hidden="true"></div>
                         <div class="career-entry-content">
                             <div class="career-entry-head">
-                                <h3>Group Lead – Data Science</h3>
+                                <div class="career-title-group"><h3>Group Lead – Data Science</h3><p class="career-company">DigiVriddhi</p></div>
                                 <div class="career-meta"><span class="career-dates">Jul 2024 – Dec 2024</span><span class="career-location">Mumbai, India</span></div>
                             </div>
-                            <p class="career-company">DigiVriddhi</p>
                             <p class="career-description">Custom-trained machine-learning models for object detection, classification, and segmentation, achieving reported accuracy above 80%. Designed proof-of-concept computer-vision pipelines around business requirements. Collaborated with cross-functional teams to align technical solutions with business objectives and improve workflows.</p>
                         </div>
                     </article>
@@ -155,10 +171,9 @@
                         <div class="career-marker" aria-hidden="true"></div>
                         <div class="career-entry-content">
                             <div class="career-entry-head">
-                                <h3>AI/ML Engineer</h3>
+                                <div class="career-title-group"><h3>AI/ML Engineer</h3><p class="career-company">Atlas Systems</p></div>
                                 <div class="career-meta"><span class="career-dates">Aug 2023 – May 2024</span><span class="career-location">Bangalore, India</span></div>
                             </div>
-                            <p class="career-company">Atlas Systems</p>
                             <p class="career-description">Built speech-transcription workflows using OpenAI Whisper and custom named-entity recognition models, achieving an F1 score of 90%. Developed a Flask REST API for extracting structured invoice data with Azure Document Intelligence. Implemented a PDF question-answering system using LangChain, OpenAI embeddings, and FAISS.</p>
                         </div>
                     </article>
@@ -167,10 +182,9 @@
                         <div class="career-marker" aria-hidden="true"></div>
                         <div class="career-entry-content">
                             <div class="career-entry-head">
-                                <h3>Executive Engineer</h3>
+                                <div class="career-title-group"><h3>Executive Engineer</h3><p class="career-company">Raychem RPG Pvt. Ltd.</p></div>
                                 <div class="career-meta"><span class="career-dates">Jun 2019 – Aug 2021</span><span class="career-location">Mumbai, India</span></div>
                             </div>
-                            <p class="career-company">Raychem RPG Pvt. Ltd.</p>
                             <p class="career-description">Progressed from Graduate Engineer Trainee to Executive Engineer within the Testing and Certifications team. Contributed to engineering testing and certification work, building a foundation in technical problem-solving, quality-focused processes, and systematic validation.</p>
                         </div>
                     </article>
@@ -183,19 +197,17 @@
 
                 <article class="education-entry">
                     <div class="career-entry-head">
-                        <h3>MSc in Artificial Intelligence</h3>
+                        <div class="career-title-group"><h3>MSc in Artificial Intelligence</h3><p class="career-company">Queen Mary University of London</p></div>
                         <div class="career-meta"><span class="career-dates">Sep 2022</span><span class="career-location">London, United Kingdom</span></div>
                     </div>
-                    <p class="career-company">Queen Mary University of London</p>
                     <p class="career-description">Completed postgraduate study in Artificial Intelligence, building an advanced foundation in AI and machine-learning methods. Graduated with a 2:1.</p>
                 </article>
 
                 <article class="education-entry">
                     <div class="career-entry-head">
-                        <h3>B.E. in Instrumentation Engineering</h3>
+                        <div class="career-title-group"><h3>B.E. in Instrumentation Engineering</h3><p class="career-company">University of Mumbai</p></div>
                         <div class="career-meta"><span class="career-dates">May 2019</span><span class="career-location">Mumbai, India</span></div>
                     </div>
-                    <p class="career-company">University of Mumbai</p>
                     <p class="career-description">Developed an engineering foundation in instrumentation and technical systems. Graduated with a GPA of 3.35/4.00.</p>
                 </article>
             </section>
