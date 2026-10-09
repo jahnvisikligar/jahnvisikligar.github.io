@@ -328,13 +328,18 @@ a {
 
 .about-content h2 {
     margin: 0 0 23px;
-    max-width: 19ch;
+    max-width: none;
     color: #263e5b;
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(40px, 4vw, 60px);
+    font-size: clamp(40px, 3.55vw, 56px);
     font-weight: 600;
     line-height: 0.98;
     letter-spacing: -0.02em;
+}
+
+.about-content h2 span {
+    display: block;
+    white-space: nowrap;
 }
 
 .about-text {
@@ -624,6 +629,10 @@ a {
     .about-content h2 {
         max-width: none;
         font-size: 41px;
+    }
+
+    .about-content h2 span {
+        white-space: normal;
     }
 
     .about-text {
