@@ -7,6 +7,23 @@
     <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
     <link rel="stylesheet" href="css/styles.css?v=6">
     <style>
+        .site-header .navbar { justify-content: space-between; }
+        .site-brand {
+            color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+        }
+        .site-brand:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 5px; }
+        .career-footer {
+            display: flex; align-items: center; justify-content: space-between; gap: 20px;
+            padding: 18px clamp(24px, 6vw, 72px); border-top: 1px solid var(--line);
+            background: var(--paper); color: #8a847c; font-size: 10px; letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        .career-footer p { margin: 0; }
+        .career-footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 18px; }
+        .career-footer a { color: #263e5b; text-decoration: none; }
+        .career-footer a:hover { color: var(--blue-soft); }
+        .career-footer .back-to-top { font-size: 18px; line-height: 1; padding-left: 4px; }
         .career-hero {
             padding: clamp(56px, 8vw, 104px) max(7vw, 24px);
             color: var(--left-text);
@@ -57,6 +74,11 @@
         .education-entry { padding: 0 0 28px; }
         .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
         .education-entry:last-child { padding-bottom: 0; }
+        @media (max-width: 760px) {
+            .site-brand { font-size: 16px; letter-spacing: .07em; }
+            .career-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .career-footer-links { justify-content: flex-start; gap: 14px; }
+        }
         @media (max-width: 640px) {
             .career-hero { padding: 58px 28px; }
             .career-hero::after { inset: 14px; }
@@ -72,9 +94,10 @@
         }
     </style>
 </head>
-<body>
+<body id="top">
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
+            <a class="site-brand" href="index.html" aria-label="Jahnvi Sikligar home">JAHNVI SIKLIGAR</a>
             <div class="nav-links">
                 <a href="career.html" aria-current="page">CAREER</a>
                 <a href="recognition.html">RECOGNITION</a>
@@ -95,7 +118,7 @@
 
         <div class="career-main">
             <section class="career-section" aria-labelledby="experience-heading">
-                <p class="career-section-label">01 / EXPERIENCE</p>
+                
                 <h2 id="experience-heading">Professional experience</h2>
 
                 <div class="career-timeline">
@@ -154,7 +177,7 @@
             </section>
 
             <section class="career-section" aria-labelledby="education-heading">
-                <p class="career-section-label">02 / EDUCATION</p>
+                
                 <h2 id="education-heading">Academic foundation</h2>
 
                 <article class="education-entry">
@@ -180,8 +203,18 @@
         </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="career-footer">
         <p>© 2026 Jahnvi Sikligar</p>
+        <nav class="career-footer-links" aria-label="Quick links">
+            <a href="https://drive.google.com/file/d/1fbDe1WRoLAM9IEWH1a6erwaehUJIKIuO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+            <span aria-hidden="true">|</span>
+            <a href="https://github.com/jahnvisikligar" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">|</span>
+            <a href="work-with-me/">Let's collab</a>
+            <span aria-hidden="true">|</span>
+            <a href="https://www.linkedin.com/in/jahnvi-sikligar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+            <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">↑</a>
+        </nav>
     </footer>
 </body>
 </html>
