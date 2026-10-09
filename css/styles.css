@@ -357,10 +357,9 @@ a {
 }
 
 .expertise {
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content minmax(28px, 1fr) max-content minmax(28px, 1fr) max-content minmax(28px, 1fr) max-content;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
     margin-top: 14px;
     padding: 12px 0;
     border-top: 1px solid var(--line);
@@ -373,10 +372,12 @@ a {
     white-space: nowrap;
 }
 
-.expertise span + span::before {
-    content: "·";
-    margin-right: 18px;
-    color: var(--blue-soft);
+.expertise-separator {
+    justify-self: center;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
 }
 
 
@@ -654,6 +655,7 @@ a {
     }
 
     .expertise {
+        display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 0 10px;
@@ -662,8 +664,8 @@ a {
         white-space: normal;
     }
 
-    .expertise span + span::before {
-        margin-right: 10px;
+    .expertise-separator {
+        margin: 0;
     }
 
     .lower-content {
