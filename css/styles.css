@@ -125,20 +125,17 @@ a {
     position: relative;
     z-index: 1;
     width: min(100%, 700px);
-    text-align: left;
+    text-align: center;
 }
 
 .portrait-area {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 135px;
-    align-items: center;
-    gap: 34px;
-    margin: 0 0 28px;
+    display: block;
+    margin: 0 0 30px;
 }
 
 .profile-image-wrapper {
-    width: 100%;
-    max-width: 385px;
+    width: min(100%, 360px);
+    max-width: 360px;
     aspect-ratio: 4 / 5;
     margin: 0 auto;
     overflow: hidden;
@@ -167,7 +164,7 @@ a {
 }
 
 .portrait-notes {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 1px;
@@ -192,12 +189,12 @@ a {
 }
 
 .profile-introduction {
-    padding-left: 4px;
+    padding-left: 0;
 }
 
 .profile-introduction h1 {
-    margin: 0;
-    max-width: 12ch;
+    margin: 0 auto;
+    max-width: 15ch;
     color: var(--left-text);
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(46px, 5vw, 72px);
@@ -208,25 +205,25 @@ a {
 
 .profile-role {
     margin: 19px 0 0;
-    color: rgba(249, 247, 241, 0.78);
+    color: rgba(249, 247, 241, 0.88);
     font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.19em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     line-height: 1.6;
-    text-transform: uppercase;
 }
 
 .profile-rule {
     width: 68px;
     height: 1px;
-    margin: 27px 0 22px 4px;
+    margin: 27px auto 22px;
     background: rgba(255, 255, 255, 0.52);
 }
 
 .profile-links {
     display: flex;
     align-items: center;
-    padding-left: 4px;
+    justify-content: center;
+    padding-left: 0;
 }
 
 .profile-links a {
@@ -460,15 +457,6 @@ a {
 
     .landing-right {
         padding: 50px 44px;
-    }
-
-    .portrait-area {
-        grid-template-columns: minmax(0, 1fr) 112px;
-        gap: 22px;
-    }
-
-    .portrait-notes {
-        font-size: clamp(25px, 2.8vw, 35px);
     }
 
     .profile-introduction h1 {
