@@ -32,6 +32,27 @@
         .career-footer a:hover { color: var(--blue-soft); }
         .career-footer .back-to-top { font-size: 18px; line-height: 1; padding-left: 4px; }
         .career-footer-links svg { width: 16px; height: 16px; display: block; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+        .career-hero-nav {
+            max-width: 1120px; margin: 0 auto 54px; position: relative; z-index: 1;
+            display: flex; align-items: center; justify-content: space-between; gap: 28px;
+        }
+        .career-hero-nav .site-brand {
+            color: #F5F1E8; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+        }
+        .career-nav-links {
+            display: flex; align-items: center; justify-content: flex-end; gap: clamp(16px, 2.5vw, 34px);
+        }
+        .career-nav-links a {
+            color: #F5F1E8; font-size: 10px; letter-spacing: .14em; text-decoration: none;
+            white-space: nowrap; padding: 8px 0; border-bottom: 1px solid transparent;
+        }
+        .career-nav-links a:hover, .career-nav-links a[aria-current="page"] {
+            border-bottom-color: #F5F1E8;
+        }
+        .career-nav-links a:focus-visible, .career-hero-nav .site-brand:focus-visible {
+            outline: 2px solid #F5F1E8; outline-offset: 4px;
+        }
         .career-hero {
             padding: clamp(56px, 8vw, 104px) max(7vw, 24px);
             color: var(--left-text);
@@ -85,16 +106,15 @@
         .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
         .education-entry:last-child { padding-bottom: 0; }
         @media (max-width: 900px) {
-            .site-header .navbar { gap: 18px; }
-            .site-header .nav-links { gap: 16px; }
-            .site-brand { font-size: 17px; }
+            .career-hero-nav { gap: 18px; margin-bottom: 42px; }
+            .career-hero-nav .site-brand { font-size: 17px; }
+            .career-nav-links { gap: 14px; }
         }
         @media (max-width: 760px) {
-            .site-header .navbar { flex-wrap: wrap; }
-            .site-header .nav-links { width: 100%; justify-content: space-between; gap: 10px; }
-            .site-header .nav-links a { font-size: 10px; }
-
-            .site-brand { font-size: 16px; letter-spacing: .07em; }
+            .career-hero-nav { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 38px; }
+            .career-nav-links { width: 100%; justify-content: space-between; gap: 10px; }
+            .career-nav-links a { font-size: 9px; letter-spacing: .08em; }
+            .career-hero-nav .site-brand { font-size: 16px; letter-spacing: .07em; }
             .career-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
             .career-footer-links { justify-content: flex-start; gap: 14px; }
         }
@@ -118,20 +138,17 @@
     </style>
 </head>
 <body id="top">
-    <header class="site-header">
-        <nav class="navbar" aria-label="Main navigation">
-            <a class="site-brand" href="index.html" aria-label="Jahnvi Sikligar home">JAHNVI SIKLIGAR</a>
-            <div class="nav-links">
-                <a href="career.html" aria-current="page">CAREER</a>
-                <a href="recognition.html">RECOGNITION</a>
-                <a href="work-with-me/">LET'S COLLAB</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
-        </nav>
-    </header>
-
     <main>
         <section class="career-hero">
+            <div class="career-hero-nav">
+                <a class="site-brand" href="index.html" aria-label="Jahnvi Sikligar home">JAHNVI SIKLIGAR</a>
+                <nav class="career-nav-links" aria-label="Main navigation">
+                    <a href="career.html" aria-current="page">CAREER</a>
+                    <a href="recognition.html">RECOGNITION</a>
+                    <a href="work-with-me/">LET'S COLLAB</a>
+                    <a href="contact.html">CONTACT</a>
+                </nav>
+            </div>
             <div class="career-hero-inner">
                 <p class="career-eyebrow">THE JOURNEY SO FAR</p>
                 <h1>Engineering thinking.<br>Artificial intelligence.</h1>
