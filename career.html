@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career | Jahnvi Sikligar</title>
+    <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
+    <link rel="stylesheet" href="css/styles.css?v=6">
+    <style>
+        .career-hero {
+            padding: clamp(56px, 8vw, 104px) max(7vw, 24px);
+            color: var(--left-text);
+            background: var(--blue);
+            position: relative;
+            overflow: hidden;
+        }
+        .career-hero::after {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid var(--white-line);
+            pointer-events: none;
+        }
+        .career-hero-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+        .career-eyebrow, .career-section-label {
+            font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+        }
+        .career-eyebrow { margin: 0 0 22px; color: rgba(249,247,241,.78); }
+        .career-hero h1 {
+            max-width: 780px; margin: 0 0 22px;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(44px, 7vw, 82px); font-weight: 600; line-height: .98; letter-spacing: -.025em;
+        }
+        .career-hero p:last-child { max-width: 610px; margin: 0; font-size: 15px; line-height: 1.85; color: rgba(249,247,241,.9); }
+        .career-main { max-width: 1120px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) clamp(24px, 6vw, 72px); }
+        .career-section + .career-section { margin-top: 76px; }
+        .career-section-label { color: var(--blue-soft); margin: 0 0 12px; }
+        .career-section h2 {
+            font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(36px, 4.5vw, 52px);
+            line-height: 1.05; font-weight: 600; color: #263e5b; margin: 0 0 34px;
+        }
+        .career-timeline { position: relative; margin-left: 5px; }
+        .career-entry { display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 20px; }
+        .career-entry + .career-entry { margin-top: 0; }
+        .career-marker { display: flex; flex-direction: column; align-items: center; }
+        .career-marker::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); margin-top: 8px; flex: 0 0 auto; }
+        .career-entry:not(:last-child) .career-marker::after { content: ""; width: 1px; flex: 1; min-height: 30px; background: rgba(28,27,25,.2); }
+        .career-entry-content { padding: 0 0 38px; }
+        .career-entry:last-child .career-entry-content { padding-bottom: 0; }
+        .career-entry-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+        .career-entry h3 { margin: 0; color: #263e5b; font-size: 20px; line-height: 1.35; font-weight: 600; }
+        .career-dates { color: var(--blue-soft); font-size: 11px; line-height: 1.5; font-weight: 600; white-space: nowrap; text-align: right; }
+        .career-company { margin: 6px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; }
+        .career-location { margin: 4px 0 14px; color: var(--muted); font-size: 12px; }
+        .career-description { max-width: 760px; margin: 0; color: #48443e; font-size: 14px; line-height: 1.85; }
+        .career-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 26px; }
+        .education-entry { padding: 0 0 28px; }
+        .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
+        .education-entry:last-child { padding-bottom: 0; }
+        @media (max-width: 640px) {
+            .career-hero { padding: 58px 28px; }
+            .career-hero::after { inset: 14px; }
+            .career-hero h1 { font-size: clamp(43px, 12vw, 60px); }
+            .career-hero p:last-child { font-size: 14px; }
+            .career-main { padding: 52px 24px; }
+            .career-section + .career-section { margin-top: 58px; }
+            .career-entry { grid-template-columns: 14px minmax(0,1fr); column-gap: 13px; }
+            .career-entry-head { display: block; }
+            .career-dates { display: block; text-align: left; margin-top: 5px; }
+            .career-entry h3 { font-size: 19px; }
+            .career-description { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="career.html" aria-current="page">CAREER</a>
+                <a href="recognition.html">RECOGNITION</a>
+                <a href="work-with-me/">LET'S COLLAB</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="career-hero">
+            <div class="career-hero-inner">
+                <p class="career-eyebrow">THE JOURNEY SO FAR</p>
+                <h1>Engineering thinking.<br>Artificial intelligence.</h1>
+                <p>My professional journey across engineering, machine learning, and intelligent systems.</p>
+            </div>
+        </section>
+
+        <div class="career-main">
+            <section class="career-section" aria-labelledby="experience-heading">
+                <p class="career-section-label">01 / EXPERIENCE</p>
+                <h2 id="experience-heading">Professional experience</h2>
+
+                <div class="career-timeline">
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <h3>Group Lead – Data Science</h3>
+                                <span class="career-dates">Jul 2024 – Dec 2024</span>
+                            </div>
+                            <p class="career-company">DigiVriddhi</p>
+                            <p class="career-location">Mumbai, India</p>
+                            <p class="career-description">Custom-trained machine-learning models for object detection, classification, and segmentation, achieving reported accuracy above 80%. Designed proof-of-concept computer-vision pipelines around business requirements. Collaborated with cross-functional teams to align technical solutions with business objectives and improve workflows.</p>
+                        </div>
+                    </article>
+
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <h3>AI/ML Engineer</h3>
+                                <span class="career-dates">Aug 2023 – May 2024</span>
+                            </div>
+                            <p class="career-company">Atlas Systems</p>
+                            <p class="career-location">Bangalore, India</p>
+                            <p class="career-description">Built speech-transcription workflows using OpenAI Whisper and custom named-entity recognition models, achieving an F1 score of 90%. Developed a Flask REST API for extracting structured invoice data with Azure Document Intelligence. Implemented a PDF question-answering system using LangChain, OpenAI embeddings, and FAISS.</p>
+                        </div>
+                    </article>
+
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <h3>Executive Engineer</h3>
+                                <span class="career-dates">Jun 2019 – Aug 2021</span>
+                            </div>
+                            <p class="career-company">Raychem RPG Pvt. Ltd.</p>
+                            <p class="career-location">India</p>
+                            <p class="career-description">Progressed from Graduate Engineer Trainee to Executive Engineer within the Testing and Certifications team. Contributed to engineering testing and certification work, building a foundation in technical problem-solving, quality-focused processes, and systematic validation.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="career-section" aria-labelledby="education-heading">
+                <p class="career-section-label">02 / EDUCATION</p>
+                <h2 id="education-heading">Academic foundation</h2>
+
+                <article class="education-entry">
+                    <div class="career-entry-head">
+                        <h3>MSc in Artificial Intelligence</h3>
+                        <span class="career-dates">2022</span>
+                    </div>
+                    <p class="career-company">Queen Mary University of London</p>
+                    <p class="career-location">London, United Kingdom</p>
+                    <p class="career-description">Completed postgraduate study in Artificial Intelligence, building an advanced foundation in AI and machine-learning methods. Graduated with a 2:1.</p>
+                </article>
+
+                <article class="education-entry">
+                    <div class="career-entry-head">
+                        <h3>B.E. in Instrumentation Engineering</h3>
+                        <span class="career-dates">2019</span>
+                    </div>
+                    <p class="career-company">University of Mumbai</p>
+                    <p class="career-location">Mumbai, India</p>
+                    <p class="career-description">Developed an engineering foundation in instrumentation and technical systems. Graduated with a GPA of 3.35/4.00.</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Jahnvi Sikligar</p>
+    </footer>
+</body>
+</html>
