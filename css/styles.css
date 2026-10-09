@@ -85,7 +85,7 @@ a {
 }
 
 .nav-links a:hover {
-    color: var(--wine);
+    color: var(--blue);
     background: rgba(54, 83, 111, 0.035);
 }
 
@@ -107,7 +107,7 @@ a {
     justify-content: center;
     padding: 70px 64px;
     color: #f9f5ed;
-    background: var(--wine);
+    background: var(--blue);
 }
 
 .landing-left::before {
@@ -263,7 +263,7 @@ a {
 
 .about-eyebrow {
     margin: 0 0 26px;
-    color: var(--wine-soft);
+    color: var(--blue-soft);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.24em;
@@ -296,7 +296,7 @@ a {
 }
 
 .about-text strong {
-    color: var(--wine);
+    color: var(--blue);
     font-weight: 600;
 }
 
@@ -341,7 +341,7 @@ a {
 
 .ask-me span:hover {
     transform: none;
-    color: var(--wine);
+    color: var(--blue);
 }
 
 .site-footer {
