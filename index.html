@@ -30,7 +30,7 @@
 
                         <div class="profile-image-wrapper">
                             <img
-                                src="assets/profile.jpg"
+                                id="profile-photo"
                                 alt="Jahnvi Sikligar"
                                 class="profile-image"
                             >
@@ -196,6 +196,10 @@
         <p>© 2026 Jahnvi Sikligar</p>
     </footer>
 
+    <script src="assets/profile-image.js"></script>
+    <script>
+        document.getElementById("profile-photo").src = window.profileImageData;
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
