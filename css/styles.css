@@ -328,18 +328,20 @@ a {
 }
 
 .about-content h2 {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     max-width: none;
     color: #263e5b;
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(40px, 3.55vw, 56px);
     font-weight: 600;
-    line-height: 0.93;
+    line-height: 0.82;
     letter-spacing: -0.02em;
 }
 
 .about-content h2 span {
     display: block;
+    margin: 0;
+    padding: 0;
     white-space: nowrap;
 }
 
@@ -351,15 +353,15 @@ a {
 }
 
 .about-text p {
-    margin: 0 0 18px;
+    margin: 0 0 14px;
 }
 
 .expertise {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    margin-top: 16px;
+    gap: 0;
+    margin-top: 14px;
     padding: 12px 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
@@ -369,6 +371,12 @@ a {
     letter-spacing: 0.13em;
     line-height: 1.6;
     white-space: nowrap;
+}
+
+.expertise span + span::before {
+    content: "·";
+    margin-right: 18px;
+    color: var(--blue-soft);
 }
 
 
@@ -485,7 +493,7 @@ a {
 
     .expertise {
         font-size: 10px;
-        letter-spacing: 0.10em;
+        letter-spacing: 0.11em;
     }
 }
 
@@ -648,10 +656,14 @@ a {
     .expertise {
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 0 9px;
+        gap: 0 10px;
         font-size: 9px;
         letter-spacing: 0.10em;
         white-space: normal;
+    }
+
+    .expertise span + span::before {
+        margin-right: 10px;
     }
 
     .lower-content {
