@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career | Jahnvi Sikligar</title>
+    <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
+    <link rel="stylesheet" href="css/styles.css?v=6">
+    <style>
+        .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
+        .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
+        .site-header .nav-links a { white-space: nowrap; }
+        .career-entry-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+        .career-title-group { min-width: 0; }
+        .career-title-group .career-company { margin: 3px 0 0; }
+        .career-title-group .career-location { margin: 3px 0 0; }
+        .career-title-group .career-company + .career-location { margin-top: 3px; }
+        .site-brand {
+            color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+        }
+        .site-brand:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 5px; }
+        .career-footer {
+            display: flex; align-items: center; justify-content: space-between; gap: 20px;
+            padding: 18px clamp(24px, 6vw, 72px); border-top: 1px solid var(--line);
+            background: var(--paper); color: #8a847c; font-size: 10px; letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        .career-footer p { margin: 0; }
+        .career-footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 18px; }
+        .career-footer a { color: #263e5b; text-decoration: none; }
+        .career-footer a:hover { color: var(--blue-soft); }
+        .career-footer .back-to-top { font-size: 18px; line-height: 1; padding-left: 4px; }
+        .career-footer-links svg { width: 16px; height: 16px; display: block; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+        .career-header {
+            background: var(--paper); padding: 20px max(7vw, 24px);
+        }
+        .career-header-inner {
+            max-width: 1120px; margin: 0 auto; display: flex; align-items: center;
+            justify-content: space-between; gap: 28px;
+        }
+        .career-header .site-brand {
+            color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+        }
+        .career-nav-links {
+            display: flex; align-items: center; justify-content: flex-end; gap: clamp(16px, 2.5vw, 34px);
+        }
+        .career-nav-links a {
+            color: #263e5b; font-size: 10px; letter-spacing: .14em; text-decoration: none;
+            white-space: nowrap; padding: 8px 0; border-bottom: 1px solid transparent;
+        }
+        .career-nav-links a:hover, .career-nav-links a[aria-current="page"] {
+            border-bottom-color: #36536F;
+        }
+        .career-nav-links a:focus-visible, .career-header .site-brand:focus-visible {
+            outline: 2px solid var(--blue-soft); outline-offset: 4px;
+        }
+        .career-hero {
+            padding: clamp(42px, 5vw, 64px) max(7vw, 24px);
+            color: var(--left-text);
+            background: var(--blue);
+            position: relative;
+            overflow: hidden;
+        }
+        .career-hero::after {
+            content: "";
+            position: absolute;
+            inset: 22px;
+            border: 1px solid var(--white-line);
+            pointer-events: none;
+        }
+        .career-hero-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+        .career-eyebrow, .career-section-label {
+            font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+        }
+        .career-eyebrow { margin: 0 0 22px; color: rgba(249,247,241,.78); }
+        .career-hero h1 {
+            max-width: 780px; margin: 0 0 22px;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(44px, 7vw, 82px); font-weight: 600; line-height: .98; letter-spacing: -.025em;
+        }
+        .career-hero p:last-child { max-width: 610px; margin: 0; font-size: 15px; line-height: 1.85; color: rgba(249,247,241,.9); }
+        .career-main { max-width: 1120px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) clamp(24px, 6vw, 72px); }
+        .career-section + .career-section { margin-top: 76px; }
+        .career-section-label { color: var(--blue-soft); margin: 0 0 12px; }
+        .career-section h2 {
+            font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(36px, 4.5vw, 52px);
+            line-height: 1.05; font-weight: 600; color: #263e5b; margin: 0 0 34px;
+        }
+        .career-timeline { position: relative; margin-left: 5px; }
+        .career-entry { display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 20px; }
+        .career-entry + .career-entry { margin-top: 0; }
+        .career-marker { display: flex; flex-direction: column; align-items: center; }
+        .career-marker::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); margin-top: 8px; flex: 0 0 auto; }
+        .career-entry:not(:last-child) .career-marker::after { content: ""; width: 1px; flex: 1; min-height: 30px; background: rgba(28,27,25,.2); }
+        .career-entry-content { padding: 0 0 38px; }
+        .career-entry:last-child .career-entry-content { padding-bottom: 0; }
+        
+        .career-entry h3 { margin: 0; color: #263e5b; font-size: 20px; line-height: 1.35; font-weight: 600; }
+        .career-dates { color: var(--blue-soft); font-size: 11px; line-height: 1.5; font-weight: 600; white-space: nowrap; text-align: right; }
+        .career-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 150px; flex: 0 0 auto; }
+        .career-meta .career-location { margin: 0; text-align: right; }
+        .career-company { margin: 3px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; }
+        .career-location { margin: 4px 0 14px; color: var(--muted); font-size: 12px; }
+        .career-description { max-width: 760px; margin: 0; color: #48443e; font-size: 14px; line-height: 1.85; }
+        .career-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 26px; }
+        .education-entry { padding: 0 0 28px; }
+        .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
+        .education-entry:last-child { padding-bottom: 0; }
+        @media (max-width: 900px) {
+            .career-header-inner { gap: 18px; }
+            .career-header .site-brand { font-size: 17px; }
+            .career-nav-links { gap: 14px; }
+        }
+        @media (max-width: 760px) {
+            .career-header-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+            .career-nav-links { width: 100%; justify-content: space-between; gap: 10px; }
+            .career-nav-links a { font-size: 9px; letter-spacing: .08em; }
+            .career-header .site-brand { font-size: 16px; letter-spacing: .07em; }
+            .career-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .career-footer-links { justify-content: flex-start; gap: 14px; }
+        }
+        @media (max-width: 640px) {
+            .career-hero { padding: 58px 28px; }
+            .career-hero::after { inset: 14px; }
+            .career-hero h1 { font-size: clamp(43px, 12vw, 60px); }
+            .career-hero p:last-child { font-size: 14px; }
+            .career-main { padding: 52px 24px; }
+            .career-section + .career-section { margin-top: 58px; }
+            .career-entry { grid-template-columns: 14px minmax(0,1fr); column-gap: 13px; }
+            .career-entry-head { display: flex; flex-direction: column; gap: 2px; }
+            .career-meta { align-items: flex-start; margin-top: 3px; }
+            .career-meta .career-location { text-align: left; }
+            .career-dates { display: block; text-align: left; margin-top: 5px; }
+            .career-meta { align-items: flex-start; margin-top: 5px; }
+            .career-meta .career-location { text-align: left; }
+            .career-entry h3 { font-size: 19px; }
+            .career-description { font-size: 13px; }
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="career-header">
+        <div class="career-header-inner">
+            <a class="site-brand" href="index.html" aria-label="Jahnvi Sikligar home">JAHNVI SIKLIGAR</a>
+            <nav class="career-nav-links" aria-label="Main navigation">
+                <a href="career.html" aria-current="page">CAREER</a>
+                <a href="recognition.html">RECOGNITION</a>
+                <a href="work-with-me/">LET'S COLLAB</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="career-hero">
+            <div class="career-hero-inner">
+                <p class="career-eyebrow">THE JOURNEY SO FAR</p>
+                <h1>Engineering thinking.<br>Artificial intelligence.</h1>
+                <p>My professional journey across engineering, machine learning, and intelligent systems.</p>
+            </div>
+        </section>
+
+        <div class="career-main">
+            <section class="career-section" aria-labelledby="experience-heading">
+                
+                <h2 id="experience-heading">Professional experience</h2>
+
+                <div class="career-timeline">
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <div class="career-title-group"><h3>Data Scientist</h3><p class="career-company">First Living Spaces Pvt. Ltd. (sirrus.ai)</p></div>
+                                <div class="career-meta"><span class="career-dates">Mar 2025 – Aug 2026</span><span class="career-location">Mumbai, India</span></div>
+                            </div>
+                            <p class="career-description">Develops multimodal AI solutions for real-estate content and document workflows. Built an LLM-driven brochure-personalization pipeline that adapts copy for seven buyer personas, alongside contextual image replacement across 12 semantic categories while preserving PDF structure and layout. Contributed to vision-language workflows for understanding architectural floor plans and an ASR–LLM–TTS pipeline.</p>
+                        </div>
+                    </article>
+
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <div class="career-title-group"><h3>Group Lead – Data Science</h3><p class="career-company">DigiVriddhi</p></div>
+                                <div class="career-meta"><span class="career-dates">Jul 2024 – Dec 2024</span><span class="career-location">Mumbai, India</span></div>
+                            </div>
+                            <p class="career-description">Custom-trained machine-learning models for object detection, classification, and segmentation, achieving reported accuracy above 80%. Designed proof-of-concept computer-vision pipelines around business requirements. Collaborated with cross-functional teams to align technical solutions with business objectives and improve workflows.</p>
+                        </div>
+                    </article>
+
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <div class="career-title-group"><h3>AI/ML Engineer</h3><p class="career-company">Atlas Systems</p></div>
+                                <div class="career-meta"><span class="career-dates">Aug 2023 – May 2024</span><span class="career-location">Bangalore, India</span></div>
+                            </div>
+                            <p class="career-description">Built speech-transcription workflows using OpenAI Whisper and custom named-entity recognition models, achieving an F1 score of 90%. Developed a Flask REST API for extracting structured invoice data with Azure Document Intelligence. Implemented a PDF question-answering system using LangChain, OpenAI embeddings, and FAISS.</p>
+                        </div>
+                    </article>
+
+                    <article class="career-entry">
+                        <div class="career-marker" aria-hidden="true"></div>
+                        <div class="career-entry-content">
+                            <div class="career-entry-head">
+                                <div class="career-title-group"><h3>Executive Engineer</h3><p class="career-company">Raychem RPG Pvt. Ltd.</p></div>
+                                <div class="career-meta"><span class="career-dates">Jun 2019 – Aug 2021</span><span class="career-location">Mumbai, India</span></div>
+                            </div>
+                            <p class="career-description">Progressed from Graduate Engineer Trainee to Executive Engineer within the Testing and Certifications team. Contributed to engineering testing and certification work, building a foundation in technical problem-solving, quality-focused processes, and systematic validation.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="career-section" aria-labelledby="education-heading">
+                
+                <h2 id="education-heading">Academic foundation</h2>
+
+                <article class="education-entry">
+                    <div class="career-entry-head">
+                        <div class="career-title-group"><h3>MSc in Artificial Intelligence</h3><p class="career-company">Queen Mary University of London</p></div>
+                        <div class="career-meta"><span class="career-dates">Sep 2022</span><span class="career-location">London, United Kingdom</span></div>
+                    </div>
+                    <p class="career-description">Completed postgraduate study in Artificial Intelligence, building an advanced foundation in AI and machine-learning methods. Graduated with a 2:1.</p>
+                </article>
+
+                <article class="education-entry">
+                    <div class="career-entry-head">
+                        <div class="career-title-group"><h3>B.E. in Instrumentation Engineering</h3><p class="career-company">University of Mumbai</p></div>
+                        <div class="career-meta"><span class="career-dates">May 2019</span><span class="career-location">Mumbai, India</span></div>
+                    </div>
+                    <p class="career-description">Developed an engineering foundation in instrumentation and technical systems. Graduated with a GPA of 3.35/4.00.</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="career-footer">
+        <p>© 2026 Jahnvi Sikligar</p>
+        <nav class="career-footer-links" aria-label="Quick links">
+            <a href="https://drive.google.com/file/d/1fbDe1WRoLAM9IEWH1a6erwaehUJIKIuO/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v6h5M10 14h6M10 18h6"/></svg></a>
+            <span aria-hidden="true">|</span>
+            <a href="https://github.com/jahnvisikligar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2m12 4v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.1-.4-3.7 1.4a13 13 0 0 0-6.7 0C5.8.1 4.7.5 4.7.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.7V21"/></svg></a>
+            <span aria-hidden="true">|</span>
+            <a href="https://www.linkedin.com/in/jahnvi-sikligar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v11M4 4h.01M9 20v-6.2c0-2.2 1.2-3.5 3.1-3.5s3.1 1.3 3.1 3.5V20M9 10v10M2 2h20v20H2z"/></svg></a>
+            <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">↑</a>
+        </nav>
+    </footer>
+</body>
+</html>
