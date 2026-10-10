@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career | Jahnvi Sikligar</title>
-    <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
-    <link rel="stylesheet" href="css/styles.css?v=7">
+    <title>My Professional Journey | Jahnvi Sikligar</title>
+    <meta name="description" content="Jahnvi Sikligar’s professional journey across engineering, machine learning, and artificial intelligence.">
+    <link rel="stylesheet" href="css/styles.css?v=7">\n    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
         .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
@@ -33,7 +33,7 @@
         .career-footer .back-to-top { font-size: 18px; line-height: 1; padding-left: 4px; }
         .career-footer-links svg { width: 16px; height: 16px; display: block; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
         .career-header {
-            background: var(--paper); padding: 20px max(7vw, 24px);
+            background: var(--paper); padding: 18px clamp(24px, 5vw, 78px); border-bottom: 1px solid rgba(36,74,99,.12);
         }
         .career-header-inner {
             max-width: 1120px; margin: 0 auto; display: flex; align-items: center;
@@ -81,12 +81,12 @@
             font-size: clamp(44px, 7vw, 82px); font-weight: 600; line-height: .98; letter-spacing: -.025em;
         }
         .career-hero p:last-child { max-width: 610px; margin: 0; font-size: 15px; line-height: 1.85; color: rgba(249,247,241,.9); }
-        .career-main { max-width: 1120px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) clamp(24px, 6vw, 72px); }
-        .career-section + .career-section { margin-top: 76px; }
+        .career-main { max-width: 1400px; margin: 0 auto; padding: 28px clamp(24px, 5vw, 78px) 42px; }
+        .career-section + .career-section { margin-top: 12px; padding-top: 22px; border-top: 1px solid var(--line); }
         .career-section-label { color: var(--blue-soft); margin: 0 0 12px; }
         .career-section h2 {
-            font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(36px, 4.5vw, 52px);
-            line-height: 1.05; font-weight: 600; color: #263e5b; margin: 0 0 34px;
+            font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(32px, 3.5vw, 42px);
+            line-height: 1.05; font-weight: 600; color: #263e5b; margin: 0 0 18px;
         }
         .career-timeline { position: relative; margin-left: 5px; }
         .career-entry { display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 20px; }
@@ -94,16 +94,16 @@
         .career-marker { display: flex; flex-direction: column; align-items: center; }
         .career-marker::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); margin-top: 8px; flex: 0 0 auto; }
         .career-entry:not(:last-child) .career-marker::after { content: ""; width: 1px; flex: 1; min-height: 30px; background: rgba(28,27,25,.2); }
-        .career-entry-content { padding: 0 0 38px; }
-        .career-entry:last-child .career-entry-content { padding-bottom: 0; }
+        .career-entry-content { padding: 14px 18px 16px; margin-bottom: 12px; background: rgba(251,249,243,.68); border: 1px solid rgba(217,221,217,.55); border-radius: 5px; }
+        .career-entry:last-child .career-entry-content { padding-bottom: 16px; }
         
-        .career-entry h3 { margin: 0; color: #263e5b; font-size: 20px; line-height: 1.35; font-weight: 600; }
+        .career-entry h3 { margin: 0; color: var(--blue-deep); font: 600 22px/1.12 "Cormorant Garamond", Georgia, serif; }
         .career-dates { color: var(--blue-soft); font-size: 11px; line-height: 1.5; font-weight: 600; white-space: nowrap; text-align: right; }
         .career-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; min-width: 150px; flex: 0 0 auto; }
         .career-meta .career-location { margin: 0; text-align: right; }
-        .career-company { margin: 3px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; }
-        .career-location { margin: 4px 0 14px; color: var(--muted); font-size: 12px; }
-        .career-description { max-width: 760px; margin: 0; color: #48443e; font-size: 14px; line-height: 1.85; }
+        .career-company { margin: 3px 0 0; color: var(--ink); font: 500 16px/1.3 "Cormorant Garamond", Georgia, serif; }
+        .career-location { margin: 4px 0 8px; color: var(--muted); font-size: 12px; }
+        .career-description { max-width: 760px; margin: 0; color: #526776; font-size: 13px; line-height: 1.65; }
         .career-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 26px; }
         .education-entry { padding: 0 0 28px; }
         .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
@@ -150,9 +150,9 @@
             font: 600 10px/1.4 "Inter", sans-serif; letter-spacing: .12em;
             text-transform: uppercase; transition: color 180ms ease, border-color 180ms ease;
         }
-        .career-filter:first-child { padding-left: 0; }
+        .career-filter:first-child { padding-left: 14px; }
         .career-filter:hover, .career-filter[aria-pressed="true"] {
-            color: #263e5b; border-bottom-color: var(--blue);
+            color: var(--paper); border-color: var(--blue); background: #6C8FA1;
         }
         .career-filter:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 3px; }
         .recognition-grid {
@@ -160,7 +160,7 @@
             column-gap: 36px; row-gap: 0; border-top: 1px solid var(--line);
         }
         .recognition-item {
-            min-width: 0; padding: 24px 0 26px; border-bottom: 1px solid var(--line);
+            min-width: 0; padding: 20px 18px 18px; background: var(--pale-blue); border: 1px solid #D6E0E2; border-radius: 4px;
         }
         .recognition-type {
             margin: 0 0 9px; color: var(--blue-soft); font-size: 9px;
@@ -168,10 +168,10 @@
         }
         .recognition-item h3 {
             margin: 0 0 5px; color: #263e5b;
-            font: 600 25px/1.12 "Cormorant Garamond", Georgia, serif;
+            font: 600 24px/1.12 "Cormorant Garamond", Georgia, serif;
         }
         .recognition-source { margin: 0 0 10px; color: var(--ink); font-size: 12px; font-weight: 500; }
-        .recognition-description { margin: 0; max-width: 58ch; color: #48443e; font-size: 13px; line-height: 1.8; }
+        .recognition-description { margin: 0; max-width: 58ch; color: #40596A; font-size: 12px; line-height: 1.65; }
         .recognition-link {
             display: inline-block; margin-top: 13px; color: #263e5b;
             font-size: 10px; font-weight: 600; letter-spacing: .1em;
