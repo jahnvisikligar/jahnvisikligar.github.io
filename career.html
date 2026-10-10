@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career | Jahnvi Sikligar</title>
     <meta name="description" content="Jahnvi Sikligar's professional journey, experience, and education across engineering and artificial intelligence.">
-    <link rel="stylesheet" href="css/styles.css?v=6">
+    <link rel="stylesheet" href="css/styles.css?v=7">
     <style>
         .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
         .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
@@ -138,6 +138,54 @@
             .career-entry h3 { font-size: 19px; }
             .career-description { font-size: 13px; }
         }
+
+        .career-filters {
+            display: flex; align-items: center; gap: 0; flex-wrap: wrap;
+            margin: 0 0 68px; border-bottom: 1px solid var(--line);
+        }
+        .career-filter {
+            appearance: none; border: 0; border-bottom: 2px solid transparent;
+            background: transparent; color: var(--muted); cursor: pointer;
+            padding: 15px 20px 14px; margin-bottom: -1px;
+            font: 600 10px/1.4 "Inter", sans-serif; letter-spacing: .12em;
+            text-transform: uppercase; transition: color 180ms ease, border-color 180ms ease;
+        }
+        .career-filter:first-child { padding-left: 0; }
+        .career-filter:hover, .career-filter[aria-pressed="true"] {
+            color: #263e5b; border-bottom-color: var(--blue);
+        }
+        .career-filter:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 3px; }
+        .recognition-grid {
+            display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 36px; row-gap: 0; border-top: 1px solid var(--line);
+        }
+        .recognition-item {
+            min-width: 0; padding: 24px 0 26px; border-bottom: 1px solid var(--line);
+        }
+        .recognition-type {
+            margin: 0 0 9px; color: var(--blue-soft); font-size: 9px;
+            font-weight: 600; letter-spacing: .15em; text-transform: uppercase;
+        }
+        .recognition-item h3 {
+            margin: 0 0 5px; color: #263e5b;
+            font: 600 25px/1.12 "Cormorant Garamond", Georgia, serif;
+        }
+        .recognition-source { margin: 0 0 10px; color: var(--ink); font-size: 12px; font-weight: 500; }
+        .recognition-description { margin: 0; max-width: 58ch; color: #48443e; font-size: 13px; line-height: 1.8; }
+        .recognition-link {
+            display: inline-block; margin-top: 13px; color: #263e5b;
+            font-size: 10px; font-weight: 600; letter-spacing: .1em;
+            text-decoration: none; text-transform: uppercase;
+            border-bottom: 1px solid rgba(38,62,91,.35); padding-bottom: 3px;
+        }
+        .recognition-link:hover { border-bottom-color: currentColor; color: var(--blue-soft); }
+        @media (max-width: 640px) {
+            .career-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 50px; }
+            .career-filter, .career-filter:first-child { text-align: left; padding: 13px 8px; font-size: 9px; }
+            .recognition-grid { grid-template-columns: minmax(0,1fr); }
+            .recognition-item h3 { font-size: 24px; }
+        }
+
     </style>
 </head>
 <body id="top">
@@ -160,7 +208,13 @@
         </section>
 
         <div class="career-main">
-            <section class="career-section" aria-labelledby="experience-heading">
+            <nav class="career-filters" aria-label="Filter career content">
+                <button class="career-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="career-filter" type="button" data-filter="experience" aria-pressed="false">Professional Experience</button>
+                <button class="career-filter" type="button" data-filter="education" aria-pressed="false">Education</button>
+                <button class="career-filter" type="button" data-filter="recognition" aria-pressed="false">Recognition</button>
+            </nav>
+            <section class="career-section" data-category="experience" aria-labelledby="experience-heading">
                 
                 <h2 id="experience-heading">Professional experience</h2>
 
@@ -211,7 +265,7 @@
                 </div>
             </section>
 
-            <section class="career-section" aria-labelledby="education-heading">
+            <section class="career-section" data-category="education" aria-labelledby="education-heading">
                 
                 <h2 id="education-heading">Academic foundation</h2>
 
@@ -231,9 +285,56 @@
                     <p class="career-description">Developed an engineering foundation in instrumentation and technical systems. Graduated with a GPA of 3.35/4.00.</p>
                 </article>
             </section>
+
+            <section class="career-section" data-category="recognition" aria-labelledby="recognition-heading">
+                <p class="career-section-label">Selected milestones</p>
+                <h2 id="recognition-heading">Recognition</h2>
+                <div class="recognition-grid">
+                    <article class="recognition-item">
+                        <p class="recognition-type">Academic award</p>
+                        <h3>Gold Skills Award</h3>
+                        <p class="recognition-source">Queen Mary University of London</p>
+                        <p class="recognition-description">Recognition received during your postgraduate studies at Queen Mary University of London.</p>
+                    </article>
+                    <article class="recognition-item">
+                        <p class="recognition-type">AI recognition</p>
+                        <h3>AI Trailblazers</h3>
+                        <p class="recognition-source">Verix · AI Trailblazers batch</p>
+                        <p class="recognition-description">AI-related cohort recognition. The entry can link to the credential once its public verification URL is confirmed.</p>
+                    </article>
+                    <article class="recognition-item">
+                        <p class="recognition-type">Certification</p>
+                        <h3>Azure AI Fundamentals</h3>
+                        <p class="recognition-source">Microsoft</p>
+                        <p class="recognition-description">Foundational certification covering AI concepts and Microsoft Azure AI services.</p>
+                    </article>
+                    <article class="recognition-item">
+                        <p class="recognition-type">Published feature</p>
+                        <h3>How Does AI Enhance Customer Engagement?</h3>
+                        <p class="recognition-source">TechBullion</p>
+                        <p class="recognition-description">An article on how AI can support customer engagement.</p>
+                        <a class="recognition-link" href="https://techbullion.com/how-does-ai-enhance-customer-engagement/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+                    </article>
+                </div>
+            </section>
         </div>
     </main>
 
+    <script>
+        (() => {
+            const filters = Array.from(document.querySelectorAll(".career-filter"));
+            const sections = Array.from(document.querySelectorAll(".career-section[data-category]"));
+            filters.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selected = button.dataset.filter;
+                    filters.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+                    sections.forEach((section) => {
+                        section.hidden = selected !== "all" && section.dataset.category !== selected;
+                    });
+                });
+            });
+        })();
+    </script>
     <footer class="career-footer">
         <p>© 2026 Jahnvi Sikligar</p>
         <nav class="career-footer-links" aria-label="Quick links">
