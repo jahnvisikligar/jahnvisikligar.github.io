@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional Journey | Jahnvi Sikligar</title>
     <meta name="description" content="Jahnvi Sikligar’s professional journey across engineering, machine learning, and artificial intelligence.">
-    <link rel="stylesheet" href="css/styles.css?v=7">\n    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
         .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
@@ -81,7 +83,7 @@
             font-size: clamp(44px, 7vw, 82px); font-weight: 600; line-height: .98; letter-spacing: -.025em;
         }
         .career-hero p:last-child { max-width: 610px; margin: 0; font-size: 15px; line-height: 1.85; color: rgba(249,247,241,.9); }
-        .career-main { max-width: 1400px; margin: 0 auto; padding: 28px clamp(24px, 5vw, 78px) 42px; }
+        .career-main { max-width: 1400px; margin: 0 auto; padding: 22px clamp(24px, 5vw, 78px) 42px; }
         .career-section + .career-section { margin-top: 12px; padding-top: 22px; border-top: 1px solid var(--line); }
         .career-section-label { color: var(--blue-soft); margin: 0 0 12px; }
         .career-section h2 {
@@ -126,8 +128,8 @@
             .career-hero::after { inset: 14px; }
             .career-hero h1 { font-size: clamp(43px, 12vw, 60px); }
             .career-hero p:last-child { font-size: 14px; }
-            .career-main { padding: 52px 24px; }
-            .career-section + .career-section { margin-top: 58px; }
+            .career-main { padding: 22px 24px 36px; }
+            .career-section + .career-section { margin-top: 12px; padding-top: 22px; }
             .career-entry { grid-template-columns: 14px minmax(0,1fr); column-gap: 13px; }
             .career-entry-head { display: flex; flex-direction: column; gap: 2px; }
             .career-meta { align-items: flex-start; margin-top: 3px; }
@@ -140,15 +142,15 @@
         }
 
         .career-filters {
-            display: flex; align-items: center; gap: 0; flex-wrap: wrap;
-            margin: 0 0 68px; border-bottom: 1px solid var(--line);
+            display: grid; grid-template-columns: .8fr 1.2fr .9fr .9fr; gap: 12px;
+            margin: 0 0 28px; padding: 0 0 18px; border-bottom: 1px solid var(--line);
         }
         .career-filter {
-            appearance: none; border: 0; border-bottom: 2px solid transparent;
-            background: transparent; color: var(--muted); cursor: pointer;
-            padding: 15px 20px 14px; margin-bottom: -1px;
-            font: 600 10px/1.4 "Inter", sans-serif; letter-spacing: .12em;
-            text-transform: uppercase; transition: color 180ms ease, border-color 180ms ease;
+            appearance: none; border: 1px solid #D6E0E2; border-radius: 4px;
+            background: rgba(230,240,242,.45); color: var(--blue-deep); cursor: pointer;
+            padding: 12px 14px; margin: 0;
+            font: 500 16px/1.2 "Cormorant Garamond", Georgia, serif;
+            transition: background 180ms ease, border-color 180ms ease;
         }
         .career-filter:first-child { padding-left: 14px; }
         .career-filter:hover, .career-filter[aria-pressed="true"] {
@@ -156,8 +158,8 @@
         }
         .career-filter:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 3px; }
         .recognition-grid {
-            display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-            column-gap: 36px; row-gap: 0; border-top: 1px solid var(--line);
+            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
         }
         .recognition-item {
             min-width: 0; padding: 20px 18px 18px; background: var(--pale-blue); border: 1px solid #D6E0E2; border-radius: 4px;
@@ -179,8 +181,9 @@
             border-bottom: 1px solid rgba(38,62,91,.35); padding-bottom: 3px;
         }
         .recognition-link:hover { border-bottom-color: currentColor; color: var(--blue-soft); }
+        @media (max-width: 900px) { .recognition-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         @media (max-width: 640px) {
-            .career-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 50px; }
+            .career-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 28px; }
             .career-filter, .career-filter:first-child { text-align: left; padding: 13px 8px; font-size: 9px; }
             .recognition-grid { grid-template-columns: minmax(0,1fr); }
             .recognition-item h3 { font-size: 24px; }
@@ -202,8 +205,8 @@
     <main>
         <section class="career-hero">
             <div class="career-hero-inner">
-                <h1>Engineering thinking.<br>Artificial intelligence.</h1>
-                <p>My professional journey across engineering, machine learning, and intelligent systems.</p>
+                <h1>My Professional Journey</h1>
+                <p>A journey across engineering, AI and real-world problem solving, shaped by curiosity, continuous learning and a passion for building meaningful solutions.</p>
             </div>
         </section>
 
