@@ -108,9 +108,14 @@
         .career-location { margin: 4px 0 8px; color: var(--muted); font-size: 12px; }
         .career-description { max-width: 760px; margin: 0; color: #526776; font-size: 13px; line-height: 1.65; }
         .career-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 26px; }
-        .education-entry { padding: 0 0 28px; }
-        .education-entry + .education-entry { border-top: 1px solid var(--line); padding-top: 28px; }
-        .education-entry:last-child { padding-bottom: 0; }
+        .education-entry {
+            padding: 14px 18px 16px;
+            margin: 0 0 12px;
+            background: rgba(251,249,243,.68);
+            border: 1px solid rgba(217,221,217,.55);
+            border-radius: 5px;
+        }
+        .education-entry:last-child { margin-bottom: 0; }
         @media (max-width: 900px) {
             .career-header-inner { gap: 18px; }
             .career-header .site-brand { font-size: 17px; }
