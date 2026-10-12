@@ -208,6 +208,13 @@
     <script>
         document.getElementById("profile-photo").src = window.profileImageData;
     </script>
+    <script src="assets/profile-image.js"></script>
+    <script>
+        const profilePhoto = document.getElementById("profile-photo");
+        if (profilePhoto && window.profileImageData) {
+            profilePhoto.src = window.profileImageData;
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
