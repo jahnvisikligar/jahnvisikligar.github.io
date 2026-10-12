@@ -682,8 +682,8 @@ a {
 
 /* Contact page: styles scoped to contact.html only */
 .contact-page {
-    --contact-primary: var(--contact-primary);
-    --contact-deep: var(--contact-deep);
+    --contact-primary: #244A63;
+    --contact-deep: #203F56;
     --contact-pale: #E6F0F2;
     --contact-off-white: #FAFAF7;
     --contact-ivory: #F5F1E8;
