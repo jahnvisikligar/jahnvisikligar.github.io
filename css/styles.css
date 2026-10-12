@@ -1138,18 +1138,6 @@ a {
         padding: 48px 0;
     }
 
-    .contact-hero::after {
-        width: 190px;
-        height: 160px;
-        right: -70px;
-        top: 0;
-    }
-    .contact-hero::before {
-        width: 160px;
-        height: 60px;
-        right: -15px;
-        top: 62px;
-    }
     .contact-desk-illustration {
         margin-top: 34px;
     }
