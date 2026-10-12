@@ -752,7 +752,7 @@ a {
 .contact-hero {
     position: relative;
     overflow: hidden;
-    padding: clamp(52px, 6.5vw, 82px) clamp(24px, 7vw, 96px);
+    padding: clamp(52px, 6.5vw, 82px) 0;
     color: var(--left-text);
     background: var(--blue);
 }
@@ -785,8 +785,8 @@ a {
 .contact-hero-inner {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 1120px;
+    width: calc(100% - 2 * clamp(24px, 5vw, 64px));
+    max-width: calc(1120px - 2 * clamp(24px, 5vw, 64px));
     margin: 0 auto;
 }
 
@@ -1160,7 +1160,7 @@ a {
     }
 
     .contact-hero {
-        padding: 48px 24px;
+        padding: 48px 0;
     }
 
     .contact-hero::after {
@@ -1177,6 +1177,11 @@ a {
     }
     .contact-desk-illustration {
         margin-top: 34px;
+    }
+
+    .contact-hero-inner {
+        width: calc(100% - 48px);
+        max-width: none;
     }
 
     .contact-hero h1 {
