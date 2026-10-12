@@ -11,50 +11,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
-        .site-header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(18px, 3vw, 42px); flex: 0 1 auto; }
-        .site-header .nav-links a { white-space: nowrap; }
         .career-entry-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
         .career-title-group { min-width: 0; }
         .career-title-group .career-company { margin: 3px 0 0; }
         .career-title-group .career-location { margin: 3px 0 0; }
         .career-title-group .career-company + .career-location { margin-top: 3px; }
         .site-brand {
-            color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+            color: #244a63; text-decoration: none; font: 600 20px/1 "Cormorant Garamond", Georgia, serif;
+            letter-spacing: .15em; white-space: nowrap;
         }
         .site-brand:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 5px; }
         .career-footer {
-            display: flex; align-items: center; justify-content: space-between; gap: 20px;
-            padding: 18px clamp(24px, 6vw, 72px); border-top: 1px solid var(--line);
-            background: var(--paper); color: #8a847c; font-size: 10px; letter-spacing: .1em;
-            text-transform: uppercase;
+            min-height: 56px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+            padding: 12px clamp(24px, 4.8vw, 76px); border-top: 1px solid var(--line);
+            background: var(--paper); color: #777b78;
         }
-        .career-footer p { margin: 0; }
+        .career-footer p { margin: 0; color: #777b78; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
         .career-footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 18px; }
-        .career-footer a { color: #263e5b; text-decoration: none; }
+        .career-footer a { color: #203f56; text-decoration: none; }
         .career-footer a:hover { color: var(--blue-soft); }
-        .career-footer .back-to-top { font-size: 18px; line-height: 1; padding-left: 4px; }
+        .career-footer .back-to-top { font: 20px/1 Inter, sans-serif; padding-left: 0; }
         .career-footer-links svg { width: 16px; height: 16px; display: block; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
         .career-header {
-            background: var(--paper); padding: 18px clamp(24px, 5vw, 78px); border-bottom: 1px solid rgba(36,74,99,.12);
+            min-height: 74px; box-sizing: border-box; padding: 0 clamp(24px, 4.8vw, 76px);
+            border-bottom: 1px solid rgba(36,74,99,.12); background: var(--paper);
+            display: flex; align-items: center;
         }
         .career-header-inner {
-            max-width: 1400px; margin: 0 auto; display: flex; align-items: center;
+            width: 100%; display: flex; align-items: center;
             justify-content: space-between; gap: 28px;
         }
         .career-header .site-brand {
-            color: #263e5b; text-decoration: none; font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 21px; letter-spacing: .1em; white-space: nowrap;
+            color: #244a63; text-decoration: none; font: 600 20px/1 "Cormorant Garamond", Georgia, serif;
+            letter-spacing: .15em; white-space: nowrap;
         }
         .career-nav-links {
-            display: flex; align-items: center; justify-content: flex-end; gap: clamp(16px, 2.5vw, 34px);
+            display: flex; align-items: center; justify-content: flex-end; gap: clamp(15px, 2.1vw, 32px);
         }
         .career-nav-links a {
-            color: #263e5b; font-size: 10px; letter-spacing: .14em; text-decoration: none;
-            white-space: nowrap; padding: 8px 0; border-bottom: 1px solid transparent;
+            padding: 28px 0 24px; border-bottom: 2px solid transparent;
+            color: #344b5d; font-size: 11px; font-weight: 400; letter-spacing: 0;
+            text-decoration: none; white-space: nowrap;
         }
         .career-nav-links a:hover, .career-nav-links a[aria-current="page"] {
-            border-bottom-color: #36536F;
+            border-bottom-color: #244a63; color: #203f56;
         }
         .career-nav-links a:focus-visible, .career-header .site-brand:focus-visible {
             outline: 2px solid var(--blue-soft); outline-offset: 4px;
@@ -132,13 +132,15 @@
             .career-header-inner { gap: 18px; }
             .career-header .site-brand { font-size: 17px; }
             .career-nav-links { gap: 14px; }
+            .career-nav-links a { padding: 28px 0 24px; }
         }
         @media (max-width: 760px) {
+            .career-header { min-height: 0; padding: 18px clamp(24px, 5vw, 78px); }
             .career-header-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
             .career-nav-links { width: 100%; justify-content: space-between; gap: 10px; }
-            .career-nav-links a { font-size: 9px; letter-spacing: .08em; }
+            .career-nav-links a { font-size: 10px; letter-spacing: 0; padding: 10px 0 13px; }
             .career-header .site-brand { font-size: 16px; letter-spacing: .07em; }
-            .career-footer { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .career-footer { align-items: center; flex-direction: row; gap: 14px; padding: 12px 24px; }
             .career-footer-links { justify-content: flex-start; gap: 14px; }
         }
         @media (max-width: 640px) {
