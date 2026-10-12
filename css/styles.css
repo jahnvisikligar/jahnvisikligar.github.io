@@ -689,15 +689,18 @@ a {
 .contact-header {
     position: relative;
     z-index: 10;
-    padding: 20px clamp(24px, 5vw, 72px);
-    border-bottom: 1px solid var(--line);
+    min-height: 74px;
+    padding: 0 clamp(24px, 4.8vw, 76px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    border-bottom: 1px solid rgba(36, 74, 99, .12);
     background: var(--paper);
 }
 
 .contact-header-inner {
     width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -705,10 +708,11 @@ a {
 }
 
 .contact-brand {
-    color: #263e5b;
+    color: #244a63;
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 21px;
-    letter-spacing: .1em;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .15em;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -717,29 +721,31 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: clamp(16px, 2.5vw, 34px);
+    gap: clamp(15px, 2.1vw, 32px);
 }
 
 .contact-nav-links a {
-    padding: 8px 0;
-    border-bottom: 1px solid transparent;
-    color: #263e5b;
-    font-size: 10px;
-    letter-spacing: .14em;
+    position: relative;
+    padding: 28px 0 24px;
+    border-bottom: 2px solid transparent;
+    color: #344b5d;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
     text-decoration: none;
     white-space: nowrap;
 }
 
 .contact-nav-links a:hover,
 .contact-nav-links a[aria-current="page"] {
-    border-bottom-color: var(--blue);
+    border-bottom-color: #244a63;
+    color: #203f56;
 }
 
-.contact-brand:focus-visible,
+ .contact-brand:focus-visible,
 .contact-nav-links a:focus-visible,
 .contact-footer a:focus-visible {
-    outline: 2px solid var(--blue-soft);
+    outline: 2px solid #668ba3;
     outline-offset: 4px;
 }
 
@@ -1064,30 +1070,40 @@ a {
 }
 
 .contact-footer {
+    min-height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 18px clamp(24px, 5vw, 72px);
+    gap: 24px;
+    padding: 12px clamp(24px, 4.8vw, 76px);
     border-top: 1px solid var(--line);
-    color: #8a847c;
+    color: #777b78;
     background: var(--paper);
-    font-size: 10px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
 }
 
 .contact-footer p {
     margin: 0;
+    color: #777b78;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
 }
 
 .contact-footer a {
-    color: #263e5b;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #203f56;
     text-decoration: none;
+    font: 500 15px "Cormorant Garamond", Georgia, serif;
 }
 
+.contact-footer a span {
+    font: 20px/1 Inter, sans-serif;
+}
 .contact-footer a:hover {
-    color: var(--blue-soft);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 @media (max-width: 800px) {
@@ -1103,15 +1119,31 @@ a {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     .contact-header {
-        padding: 18px 20px;
-    }
-
-    .contact-header-inner {
         align-items: flex-start;
         flex-direction: column;
-        gap: 14px;
+        gap: 10px;
+        padding-top: 18px;
+    }
+
+    .contact-nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .contact-nav-links a {
+        padding: 10px 0 13px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-header {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .contact-brand {
@@ -1119,13 +1151,12 @@ a {
     }
 
     .contact-nav-links {
-        justify-content: flex-start;
-        gap: 14px 20px;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .contact-nav-links a {
         font-size: 9px;
-        letter-spacing: .1em;
     }
 
     .contact-hero {
