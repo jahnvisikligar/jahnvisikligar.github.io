@@ -760,9 +760,10 @@ a {
 .contact-hero-inner {
     position: relative;
     z-index: 1;
-    width: calc(100% - 2 * clamp(24px, 5vw, 64px));
-    max-width: calc(1120px - 2 * clamp(24px, 5vw, 64px));
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
+    padding: 0 clamp(24px, 4.8vw, 76px);
 }
 
 .contact-eyebrow,
@@ -803,9 +804,9 @@ a {
     grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
     gap: clamp(36px, 6vw, 84px);
     width: 100%;
-    max-width: 1120px;
+    max-width: none;
     margin: 0 auto;
-    padding: clamp(40px, 4.2vw, 54px) clamp(24px, 5vw, 64px);
+    padding: clamp(40px, 4.2vw, 54px) clamp(24px, 4.8vw, 76px);
 }
 
 .contact-email-section,
@@ -1143,8 +1144,9 @@ a {
     }
 
     .contact-hero-inner {
-        width: calc(100% - 48px);
+        width: 100%;
         max-width: none;
+        padding: 0 24px;
     }
 
     .contact-hero h1 {
