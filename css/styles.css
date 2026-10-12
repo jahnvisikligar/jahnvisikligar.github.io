@@ -752,7 +752,7 @@ a {
 .contact-hero {
     position: relative;
     overflow: hidden;
-    padding: clamp(52px, 6.5vw, 82px) 0;
+    padding: clamp(42px, 5vw, 62px) clamp(24px, 4.8vw, 76px);
     color: var(--left-text);
     background: var(--blue);
 }
@@ -763,7 +763,6 @@ a {
     width: 100%;
     max-width: none;
     margin: 0 auto;
-    padding: 0 clamp(24px, 4.8vw, 76px);
 }
 
 .contact-eyebrow,
@@ -781,22 +780,22 @@ a {
 }
 
 .contact-hero h1 {
-    max-width: 760px;
-    margin: 0 0 16px;
+    max-width: 1050px;
+    margin: 0;
     color: var(--left-text);
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(48px, 7vw, 82px);
+    font-size: clamp(44px, 5.4vw, 76px);
     font-weight: 600;
     letter-spacing: -.025em;
     line-height: .98;
 }
 
 .contact-hero-copy {
-    max-width: 640px;
-    margin: 0;
+    max-width: 760px;
+    margin: 18px 0 0;
     color: rgba(249, 247, 241, .92);
-    font-size: 15px;
-    line-height: 1.85;
+    font-size: clamp(15px, 1.5vw, 21px);
+    line-height: 1.55;
 }
 
 .contact-main {
@@ -1136,7 +1135,7 @@ a {
     }
 
     .contact-hero {
-        padding: 48px 0;
+        padding: 46px 24px 42px;
     }
 
     .contact-desk-illustration {
@@ -1146,15 +1145,17 @@ a {
     .contact-hero-inner {
         width: 100%;
         max-width: none;
-        padding: 0 24px;
+        padding: 0;
     }
 
     .contact-hero h1 {
-        font-size: clamp(46px, 13vw, 64px);
+        font-size: clamp(42px, 11vw, 58px);
     }
 
     .contact-hero-copy {
-        font-size: 14px;
+        margin-top: 18px;
+        font-size: 15px;
+        line-height: 1.55;
     }
 
     .contact-main {
