@@ -682,13 +682,13 @@ a {
 
 /* Contact page: styles scoped to contact.html only */
 .contact-page {
-    --contact-primary: #244A63;
-    --contact-deep: #203F56;
+    --contact-primary: var(--contact-primary);
+    --contact-deep: var(--contact-deep);
     --contact-pale: #E6F0F2;
     --contact-off-white: #FAFAF7;
     --contact-ivory: #F5F1E8;
     --contact-linen: #F2F0E9;
-    --contact-ink: #203F56;
+    --contact-ink: var(--contact-deep);
     --contact-muted: #52616a;
     --contact-line: rgba(32, 63, 86, .16);
     --contact-hero-text: #FAFAF7;
@@ -855,7 +855,7 @@ a {
     align-items: center;
     gap: 16px;
     margin-top: 4px;
-    color: #263e5b;
+    color: var(--contact-primary);
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
@@ -908,7 +908,7 @@ a {
 }
 
 .contact-form-field label {
-    color: #263e5b;
+    color: var(--contact-primary);
     font-size: 12px;
     font-weight: 600;
 }
@@ -1025,14 +1025,14 @@ a {
 }
 
 .contact-link-title {
-    color: #263e5b;
+    color: var(--contact-primary);
     font-size: 12px;
     font-weight: 600;
 }
 
 .contact-link-value {
     overflow-wrap: anywhere;
-    color: #4e4a44;
+    color: #414b50;
     font-size: 12px;
     line-height: 1.5;
 }
@@ -1069,7 +1069,7 @@ a {
 
 .contact-footer p {
     margin: 0;
-    color: #777b78;
+    color: #52616a;
     font-size: 10px;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -1079,7 +1079,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #203f56;
+    color: var(--contact-deep);
     text-decoration: none;
     font: 500 15px "Cormorant Garamond", Georgia, serif;
 }
