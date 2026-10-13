@@ -153,7 +153,7 @@
             .career-footer-links { justify-content: flex-start; gap: 14px; }
         }
         @media (max-width: 640px) {
-            .career-hero { padding: 46px var(--page-gutter) 42px; }
+            .career-hero { padding: 46px clamp(24px, 4.8vw, 76px) 42px; }
             .career-hero h1 { font-size: clamp(42px, 11vw, 58px); }
             .career-hero p:last-child { font-size: clamp(15px, 1.5vw, 21px); }
             .career-main { padding: 22px 24px 36px; }
@@ -225,7 +225,7 @@
                 align-items: flex-start;
                 flex-direction: column;
                 gap: 10px;
-                padding: 18px var(--page-gutter) 0;
+                padding: 18px clamp(24px, 4.8vw, 76px) 0;
             }
             .career-header-inner {
                 align-items: flex-start;
@@ -248,7 +248,7 @@
         }
         @media (max-width: 640px) {
             .career-hero {
-                padding: 46px var(--page-gutter) 42px;
+                padding: 46px clamp(24px, 4.8vw, 76px) 42px;
             }
             .career-hero h1 {
                 font-size: clamp(42px, 11vw, 58px);
