@@ -125,7 +125,7 @@ The preview image affects how the repository link appears when shared; it does n
 ## Connect
 
 -   **Portfolio:** `<portfolio-url>`{=html}
--   **GitHub:** https://github.com/jahnvisikligar
+-   **GitHub:** `<github-url>`{=html}
 -   **LinkedIn:** `<linkedin-url>`{=html}
 
 Replace placeholder URLs with the correct live links before publishing.
