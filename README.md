@@ -31,8 +31,6 @@ projects, recognition, writing, and collaboration.
 
 -   **Home** --- an introduction to my professional focus and selected highlights.
 -   **My Professional Journey** --- career experience, education, and professional growth.
--   **Recognition** --- achievements and highlights.
--   **Blog** --- technical learnings, project explorations, and ideas.
 -   **Let's Collab / Work With Me** --- collaboration interests and ways to get in touch.
 -   **Contact** --- contact details and relevant links.
 
