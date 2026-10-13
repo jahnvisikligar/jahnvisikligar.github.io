@@ -1195,7 +1195,7 @@ a {
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
-        padding: 18px var(--page-gutter) 0;
+        padding: 18px clamp(24px, 4.8vw, 76px) 0;
     }
     .contact-header-inner {
         align-items: flex-start;
@@ -1218,7 +1218,7 @@ a {
 }
 @media (max-width: 640px) {
     .contact-hero {
-        padding: 46px var(--page-gutter) 42px;
+        padding: 46px clamp(24px, 4.8vw, 76px) 42px;
     }
     .contact-hero-inner {
         width: 100%;
