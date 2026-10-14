@@ -130,4 +130,4 @@ Replace placeholder URLs with the correct live links before publishing.
 
 ------------------------------------------------------------------------
 
-                           Built and maintained by Jahnvi Sikligar
+                             Built and maintained by Jahnvi Sikligar
