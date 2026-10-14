@@ -1,15 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+/*NEW COLOUR PALETTE FOR MAIN PAGE*/
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+/* Unified six-colour palette for the complete homepage. */
 :root {
-    --ivory: #f5f1e8;
-    --paper: #fbf9f4;
-    --ink: #1c1b19;
-    --muted: #706b63;
-    --blue: #36536F;
-    --blue-soft: #607484;
-    --line: rgba(28, 27, 25, 0.16);
-    --white-line: rgba(255, 255, 255, 0.28);
-    --left-text: #f9f7f1;
+    --primary-blue: #244A63;
+    --deep-blue: #203F56;
+    --pale-blue: #E6F0F2;
+    --off-white: #FAFAF7;
+    --ivory: #F5F1E8;
+    --linen: #F2F0E9;
+
+    /* Semantic tokens used throughout the layout. */
+    --paper: var(--off-white);
+    --ink: var(--deep-blue);
+    --muted: rgba(32, 63, 86, 0.72);
+    --blue: var(--primary-blue);
+    --blue-soft: var(--deep-blue);
+    --line: rgba(32, 63, 86, 0.16);
+    --white-line: rgba(230, 240, 242, 0.35);
+    --left-text: var(--off-white);
+    --hover-wash: rgba(230, 240, 242, 0.62);
 }
 
 * {
@@ -69,7 +79,7 @@ a {
 }
 
 .nav-links a + a {
-    border-left: 1px solid rgba(28, 27, 25, 0.08);
+    border-left: 1px solid rgba(32, 63, 86, 0.10);
 }
 
 .nav-links a::after {
@@ -88,7 +98,7 @@ a {
 .nav-links a:hover,
 .nav-links a:focus-visible {
     color: var(--blue);
-    background: rgba(54, 83, 111, 0.035);
+    background: var(--hover-wash);
 }
 
 .nav-links a:hover::after,
@@ -139,15 +149,15 @@ a {
     aspect-ratio: 4 / 5;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.40);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(250, 250, 247, 0.40);
+    background: rgba(230, 240, 242, 0.05);
+    box-shadow: 0 24px 60px rgba(32, 63, 86, 0.18);
     transition: transform 350ms ease, box-shadow 350ms ease;
 }
 
 .profile-image-wrapper:hover {
     transform: translateY(-5px);
-    box-shadow: 0 32px 72px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 32px 72px rgba(32, 63, 86, 0.25);
 }
 
 .profile-image {
@@ -168,24 +178,12 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 1px;
-    color: rgba(249, 247, 241, 0.96);
+    color: rgba(250, 250, 247, 0.96);
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(29px, 3vw, 43px);
     font-style: italic;
     font-weight: 500;
     line-height: 0.93;
-}
-
-.portrait-notes span:nth-child(2) {
-    margin-left: 10px;
-}
-
-.portrait-notes span:nth-child(3) {
-    margin-left: 2px;
-}
-
-.portrait-notes span:nth-child(4) {
-    margin-left: 18px;
 }
 
 .profile-introduction {
@@ -206,7 +204,7 @@ a {
 
 .profile-role {
     margin: 14px 0 0;
-    color: rgba(249, 247, 241, 0.88);
+    color: rgba(250, 250, 247, 0.88);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -217,7 +215,7 @@ a {
     width: 60px;
     height: 1px;
     margin: 20px auto 16px;
-    background: rgba(255, 255, 255, 0.52);
+    background: rgba(230, 240, 242, 0.52);
 }
 
 .profile-links {
@@ -245,7 +243,7 @@ a {
 }
 
 .profile-links a + a {
-    border-left: 1px solid rgba(255, 255, 255, 0.28);
+    border-left: 1px solid rgba(230, 240, 242, 0.28);
 }
 
 .profile-links a::after {
@@ -267,7 +265,7 @@ a {
 
 .profile-links a:hover,
 .profile-links a:focus-visible {
-    color: #ffffff;
+    color: var(--left-text);
     transform: translateY(-2px);
 }
 
@@ -330,7 +328,7 @@ a {
 .about-content h2 {
     margin: 0 0 10px;
     max-width: none;
-    color: #263e5b;
+    color: var(--ink);
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(40px, 3.55vw, 56px);
     font-weight: 600;
@@ -347,7 +345,7 @@ a {
 
 .about-text {
     max-width: 73ch;
-    color: #4e4a44;
+    color: rgba(32, 63, 86, 0.82);
     font-size: 15px;
     line-height: 1.78;
 }
@@ -364,7 +362,7 @@ a {
     padding: 12px 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    color: #263e5b;
+    color: var(--ink);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.13em;
@@ -379,7 +377,6 @@ a {
     font: inherit;
     line-height: inherit;
 }
-
 
 .lower-content {
     display: grid;
@@ -410,7 +407,7 @@ a {
 .personal-note,
 .current-item p {
     margin: 0;
-    color: #4e4a44;
+    color: rgba(32, 63, 86, 0.82);
     font-size: 13px;
     line-height: 1.75;
 }
@@ -451,8 +448,8 @@ a {
 .site-footer {
     padding: 17px 24px;
     border-top: 1px solid var(--line);
-    background: var(--paper);
-    color: #8a847c;
+    background: var(--linen);
+    color: var(--muted);
     font-size: 11px;
     text-align: center;
     letter-spacing: 0.05em;
@@ -465,6 +462,10 @@ a {
 :focus-visible {
     outline: 2px solid var(--blue-soft);
     outline-offset: 4px;
+}
+
+.site-header :focus-visible {
+    outline-color: var(--blue-soft);
 }
 
 @media (max-width: 1150px) {
@@ -560,21 +561,6 @@ a {
     .profile-image-wrapper {
         width: min(72vw, 270px);
         margin: 0 auto 22px;
-    }
-
-    .portrait-notes {
-        display: grid;
-        grid-template-columns: repeat(4, max-content);
-        justify-content: center;
-        gap: 8px;
-        min-width: 0;
-        margin-bottom: 25px;
-        font-size: 23px;
-        text-align: center;
-    }
-
-    .portrait-notes span:nth-child(n) {
-        margin-left: 0;
     }
 
     .profile-introduction {
@@ -678,6 +664,9 @@ a {
         font-size: 9px;
     }
 }
+
+
+
 
 
 /* Contact page: styles scoped to contact.html only */
