@@ -1,1 +1,1 @@
-This folder is for files necessary for the portfolio website.
+This folder stores the files needed for the portfolio website.
