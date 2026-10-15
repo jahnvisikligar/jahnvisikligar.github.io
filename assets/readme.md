@@ -1,4 +1,1 @@
-This folder is for files necessary for the portfolio website.
-
-- profile image
-- 
+This folder is created to store the files necessary for the portfolio website.
