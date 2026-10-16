@@ -1,4 +1,21 @@
 /* Contact page: styles scoped to contact.html only */
+
+/* Shared page reset and typography */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
 .contact-page {
     --contact-primary: #244A63;
     --contact-deep: #203F56;
@@ -111,7 +128,8 @@
 .contact-hero h1 {
     max-width: 1050px;
     margin: 0;
-    color: var(--left-text);
+    /*color: var(--left-text);*/
+    color: var(--contact-hero-text);
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(44px, 5.4vw, 76px);
     font-weight: 600;
@@ -186,11 +204,11 @@
     flex: 0 0 auto;
 }
 .contact-email-cta:hover {
-    color: var(--blue-soft);
+    color: var(--contact-primary);
     transform: translateX(3px);
 }
 .contact-email-arrow {
-    color: var(--blue);
+    color: var(--contact-primary);
     font-size: 19px;
 }
 .contact-desk-illustration {
@@ -242,7 +260,7 @@
     border: 1px solid var(--contact-line);
     border-radius: 2px;
     padding: 12px 13px;
-    color: var(--ink);
+    color: var(--contact-ink);
     background: var(--contact-linen);
     font: inherit;
     font-size: 13px;
@@ -273,7 +291,7 @@
     border: 1px solid var(--contact-primary);
     border-radius: 2px;
     padding: 12px 18px;
-    color: var(--left-text);
+    color: var(--contact-hero-text);
     background: var(--contact-primary);
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 18px;
@@ -283,7 +301,7 @@
 }
 
 .contact-submit:hover {
-    color: var(--blue);
+    color: var(--contact-primary);
     background: transparent;
     transform: translateY(-1px);
 }
@@ -322,7 +340,7 @@
 
 .contact-link[href]:hover {
     padding-left: 4px;
-    color: var(--blue-soft);
+    color: var(--contact-primary);
 }
 
 .contact-link-icon {
@@ -330,7 +348,7 @@
     place-items: center;
     width: 28px;
     height: 28px;
-    color: var(--blue);
+    color: var(--contact-primary);
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 24px;
     line-height: 1;
@@ -357,7 +375,7 @@
 
 .contact-link-arrow {
     justify-self: end;
-    color: var(--blue-soft);
+    color: var(--contact-primary);
     font-size: 15px;
     opacity: 0;
     transition: opacity 180ms ease, transform 180ms ease;
@@ -369,7 +387,8 @@
 }
 
 .contact-link-pending .contact-link-value {
-    color: var(--muted);
+    /*color: var(--muted);*/
+    color: var(--contact-muted);
     font-style: italic;
 }
 
@@ -382,7 +401,8 @@
     padding: 12px clamp(24px, 4.8vw, 76px);
     border-top: 1px solid var(--contact-line);
     color: #52616a;
-    background: var(--paper);
+    /*background: var(--paper);*/
+    background: var(--contact-off-white);
 }
 
 .contact-footer p {
