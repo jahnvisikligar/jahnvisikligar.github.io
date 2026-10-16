@@ -35,13 +35,6 @@
                             >
                         </div>
 
-                        <div class="portrait-notes" aria-label="Personal descriptors">
-                            <span>Building</span>
-                            <span>Curious</span>
-                            <span>Intelligent</span>
-                            <span>Systems</span>
-                        </div>
-
                     </div>
 
                     <div class="profile-introduction">
@@ -207,6 +200,13 @@
     <script src="assets/profile-image.js"></script>
     <script>
         document.getElementById("profile-photo").src = window.profileImageData;
+    </script>
+    <script src="assets/profile-image.js"></script>
+    <script>
+        const profilePhoto = document.getElementById("profile-photo");
+        if (profilePhoto && window.profileImageData) {
+            profilePhoto.src = window.profileImageData;
+        }
     </script>
     <script src="js/script.js"></script>
 </body>
