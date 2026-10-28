@@ -128,6 +128,22 @@ The preview image affects how the repository link appears when shared; it does n
 
 Replace placeholder URLs with the correct live links before publishing.
 
+
+
+### Support My Work
+
+If you find this project useful, learn something from it, or appreciate the work that goes into building open-source AI projects, consider supporting my work through GitHub Sponsors.
+
+Your support helps me continue experimenting, developing new ideas, and sharing practical AI projects with the community. Every contribution, big or small, is genuinely appreciated.
+
+[![Sponsor me](https://img.shields.io/badge/Sponsor-GitHub-pink?logo=github)](https://github.com/sponsors/jahnvisikligar)
+
+
+
 ------------------------------------------------------------------------
 
                              Built and maintained by Jahnvi Sikligar
+
+
+
+
