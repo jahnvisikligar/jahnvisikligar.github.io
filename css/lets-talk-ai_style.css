@@ -1,580 +1,583 @@
-/* Contact page: styles scoped to contact.html only */
+/* Let's Talk AI landing page
+   Scoped to .lta-page to keep the portfolio's other pages independent. */
 
-/* Shared page reset and typography */
+:root {
+    color-scheme: light;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behaviour: smooth;
+    scroll-padding-top: 82px;
 }
 
 body {
     margin: 0;
-    font-family: "Inter", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 
-.contact-page {
-    --contact-primary: #244A63;
-    --contact-deep: #203F56;
-    --contact-pale: #E6F0F2;
-    --contact-off-white: #FAFAF7;
-    --contact-ivory: #F5F1E8;
-    --contact-linen: #F2F0E9;
-    --contact-ink: var(--contact-deep);
-    --contact-muted: #52616a;
-    --contact-line: rgba(32, 63, 86, .16);
-    --contact-hero-text: #FAFAF7;
+.lta-page {
+    --navy: #203F56;
+    --blue: #244A63;
+    --pale-blue: #E6F0F2;
+    --linen: #F2F0E9;
+    --off-white: #FAFAF7;
+    --ink: #263C49;
+    --muted: #64747B;
+    --line: rgba(32, 63, 86, .17);
     min-height: 100vh;
-    color: var(--contact-ink);
-    background: var(--contact-linen);
+    color: var(--ink);
+    background: var(--off-white);
+    font-family: "Inter", Arial, sans-serif;
 }
 
-.contact-header {
+.lta-page a {
+    color: inherit;
+}
+
+/* Header */
+.site-header {
     position: relative;
-    z-index: 10;
+    z-index: 5;
     min-height: 74px;
-    padding: 0 clamp(24px, 4.8vw, 76px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    border-bottom: 1px solid var(--contact-line);
-    background: var(--contact-off-white);
+    padding: 0 clamp(22px, 5vw, 76px);
+    background: var(--off-white);
+    border-bottom: 1px solid var(--line);
 }
 
-.contact-header-inner {
+.header-inner {
     width: 100%;
+    max-width: 1440px;
+    min-height: 74px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 28px;
 }
 
-.contact-brand {
-    color: var(--contact-primary);
+.brand {
+    flex: 0 0 auto;
+    color: var(--blue);
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: .15em;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: .11em;
     text-decoration: none;
     white-space: nowrap;
 }
 
-.contact-nav-links {
+.brand-period,
+.hero-period {
+    color: #829CA8;
+}
+
+.main-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: clamp(15px, 2.1vw, 32px);
+    gap: clamp(14px, 2.1vw, 32px);
 }
 
-.contact-nav-links a {
-    position: relative;
-    padding: 28px 0 24px;
+.main-nav a {
+    padding: 28px 0 25px;
     border-bottom: 2px solid transparent;
-    color: var(--contact-primary);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .075em;
     text-decoration: none;
     white-space: nowrap;
+    transition: border-color 160ms ease, color 160ms ease;
 }
 
-.contact-nav-links a:hover,
-.contact-nav-links a[aria-current="page"] {
-    border-bottom-color: var(--contact-primary);
-    color: var(--contact-deep);
+.main-nav a:hover {
+    border-bottom-color: var(--blue);
+    color: var(--navy);
 }
 
- .contact-brand:focus-visible,
-.contact-nav-links a:focus-visible,
-.contact-footer a:focus-visible {
-    outline: 2px solid var(--contact-pale);
-    outline-offset: 4px;
-}
-
-.contact-hero {
+/* Hero */
+.hero {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
-    padding: clamp(42px, 5vw, 62px) clamp(24px, 4.8vw, 76px);
-    color: var(--contact-hero-text);
-    background: var(--contact-deep);
+    min-height: 314px;
+    display: flex;
+    align-items: center;
+    padding: 52px clamp(24px, 8vw, 120px);
+    color: var(--off-white);
+    background: var(--navy);
 }
 
-.contact-hero-inner {
+.hero-inner {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: none;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
-.contact-eyebrow,
-.contact-section-label {
-    margin: 0 0 18px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .2em;
-    line-height: 1.5;
-    text-transform: uppercase;
-}
-
-.contact-eyebrow {
-    color: rgba(250, 250, 247, .78);
-}
-
-.contact-hero h1 {
-    max-width: 1050px;
-    margin: 0;
-    /*color: var(--left-text);*/
-    color: var(--contact-hero-text);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(44px, 5.4vw, 76px);
-    font-weight: 600;
-    letter-spacing: -.025em;
-    line-height: .98;
-}
-
-.contact-hero-copy {
-    max-width: 760px;
-    margin: 18px 0 0;
-    color: rgba(250, 250, 247, .92);
-    font-size: clamp(15px, 1.5vw, 21px);
-    line-height: 1.55;
-}
-
-.contact-main {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
-    gap: clamp(36px, 6vw, 84px);
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-    padding: clamp(40px, 4.2vw, 54px) clamp(24px, 4.8vw, 76px);
-}
-
-.contact-email-section,
-.contact-details-section {
-    min-width: 0;
-}
-
-.contact-section-label {
-    margin-bottom: 10px;
-    color: var(--contact-primary);
+.eyebrow,
+.section-kicker {
+    margin: 0 0 15px;
     font-size: 9px;
-    letter-spacing: .17em;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: 1.6;
 }
 
-.contact-email-section h2,
-.contact-details-section h2 {
-    margin: 0 0 10px;
-    color: var(--contact-primary);
+.eyebrow {
+    color: rgba(250, 250, 247, .72);
+}
+
+.hero h1 {
+    margin: 0;
+    color: var(--off-white);
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(34px, 4vw, 46px);
+    font-size: clamp(54px, 7vw, 82px);
     font-weight: 600;
-    letter-spacing: -.015em;
-    line-height: 1.05;
+    letter-spacing: -.035em;
+    line-height: .94;
 }
 
-.contact-section-intro {
-    max-width: 48ch;
-    margin: 0 0 26px;
-    color: #414b50;
+.hero-lead {
+    margin: 15px 0 0;
+    color: var(--off-white);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(23px, 2.8vw, 32px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 13px 0 0;
+    color: rgba(250, 250, 247, .82);
     font-size: 13px;
     line-height: 1.8;
 }
 
-.contact-email-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 4px;
-    color: var(--contact-primary);
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 180ms ease, transform 180ms ease;
+.hero-byline {
+    margin: 20px 0 0;
+    color: rgba(250, 250, 247, .65);
+    font-size: 10px;
+    letter-spacing: .04em;
 }
-.contact-email-cta svg {
-    width: 36px;
-    height: 36px;
-    color: var(--contact-primary);
-    flex: 0 0 auto;
+
+.hero-byline span {
+    color: var(--off-white);
+    font-weight: 600;
 }
-.contact-email-cta:hover {
-    color: var(--contact-primary);
-    transform: translateX(3px);
-}
-.contact-email-arrow {
-    color: var(--contact-primary);
-    font-size: 19px;
-}
-.contact-desk-illustration {
-    width: 100%;
-    max-width: 590px;
-    margin: 36px 0 0;
-}
-.contact-desk-illustration svg {
+
+.hero-orbit {
+    position: absolute;
+    z-index: 0;
     display: block;
+    border: 1px solid rgba(230, 240, 242, .11);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-orbit-one {
+    width: 380px;
+    height: 380px;
+    top: -185px;
+    right: 8%;
+}
+
+.hero-orbit-two {
+    width: 250px;
+    height: 250px;
+    top: -120px;
+    right: calc(8% + 65px);
+}
+
+/* Article archive */
+.articles-section {
+    padding: 48px clamp(24px, 8vw, 120px) 42px;
+    background: var(--linen);
+}
+
+.section-inner {
     width: 100%;
-    height: auto;
-}
-.illustration-line {
-    fill: none;
-    stroke: var(--contact-primary);
-    stroke-width: 1.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-.illustration-wash {
-    stroke: none;
-}
-.illustration-wash-warm {
-    fill: rgba(245, 241, 232, .9);
-}
-.illustration-wash-blue {
-    fill: rgba(230, 240, 242, .95);
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
-.contact-form-field {
-    display: grid;
-    gap: 7px;
+.articles-inner {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-form-field label {
-    color: var(--contact-primary);
-    font-size: 12px;
-    font-weight: 600;
+.section-kicker {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 9px;
 }
 
-.contact-form-field label span {
-    color: #9b6a35;
-}
-
-.contact-form-field input,
-.contact-form-field textarea {
-    width: 100%;
-    min-width: 0;
-    border: 1px solid var(--contact-line);
-    border-radius: 2px;
-    padding: 12px 13px;
-    color: var(--contact-ink);
-    background: var(--contact-linen);
-    font: inherit;
-    font-size: 13px;
-    line-height: 1.5;
-    transition: border-color 180ms ease, background-color 180ms ease;
-}
-
-.contact-form-field textarea {
-    min-height: 132px;
-    resize: vertical;
-}
-
-.contact-form-field input:focus,
-.contact-form-field textarea:focus {
-    border-color: var(--contact-primary);
-    outline: 2px solid rgba(230, 240, 242, .8);
-    background: var(--contact-off-white);
-}
-
-.contact-submit {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    min-height: 48px;
-    margin-top: 2px;
-    border: 1px solid var(--contact-primary);
-    border-radius: 2px;
-    padding: 12px 18px;
-    color: var(--contact-hero-text);
-    background: var(--contact-primary);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
-}
-
-.contact-submit:hover {
-    color: var(--contact-primary);
-    background: transparent;
-    transform: translateY(-1px);
-}
-
-.contact-form-note {
+.section-heading h2 {
     margin: 0;
-    color: #52616a;
-    font-size: 11px;
+    color: var(--navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(37px, 4vw, 48px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.05;
+}
+
+.section-intro {
+    margin: 10px 0 22px;
+    color: #52616A;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.article-archive {
+    max-height: 310px;
+    overflow-y: auto;
+    overscroll-behaviour: contain;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    scrollbar-color: #9AADB4 transparent;
+    scrollbar-width: thin;
+}
+
+.article-archive:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+}
+
+.archive-status {
+    margin: 0;
+    padding: 20px 0;
+    color: var(--muted);
+    font-size: 12px;
     line-height: 1.6;
 }
 
-.contact-details-section {
-    border-left: 1px solid var(--contact-line);
-    padding-left: clamp(28px, 4vw, 54px);
+.archive-fallback {
+    color: var(--blue);
 }
 
-.contact-details-section .contact-section-intro {
-    margin-bottom: 22px;
+.article-item {
+    padding: 17px 0 18px;
+    border-bottom: 1px solid var(--line);
 }
 
-.contact-links {
-    display: grid;
+.article-item:last-child {
+    border-bottom: 0;
 }
 
-.contact-link {
-    display: grid;
-    grid-template-columns: 28px minmax(0, 1fr) 16px;
-    align-items: center;
-    gap: 13px;
-    min-width: 0;
-    padding: 9px 0;
-    color: inherit;
-    text-decoration: none;
-    transition: color 180ms ease, padding 180ms ease;
-}
-
-.contact-link[href]:hover {
-    padding-left: 4px;
-    color: var(--contact-primary);
-}
-
-.contact-link-icon {
-    display: grid;
-    place-items: center;
-    width: 28px;
-    height: 28px;
-    color: var(--contact-primary);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 24px;
-    line-height: 1;
-}
-
-.contact-link-copy {
-    display: grid;
-    gap: 4px;
-    min-width: 0;
-}
-
-.contact-link-title {
-    color: var(--contact-primary);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.contact-link-value {
-    overflow-wrap: anywhere;
-    color: #414b50;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-.contact-link-arrow {
-    justify-self: end;
-    color: var(--contact-primary);
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.contact-link[href]:hover .contact-link-arrow {
-    opacity: 1;
-    transform: translate(2px, -2px);
-}
-
-.contact-link-pending .contact-link-value {
-    /*color: var(--muted);*/
-    color: var(--contact-muted);
-    font-style: italic;
-}
-
-.contact-footer {
-    min-height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 12px clamp(24px, 4.8vw, 76px);
-    border-top: 1px solid var(--contact-line);
-    color: #52616a;
-    /*background: var(--paper);*/
-    background: var(--contact-off-white);
-}
-
-.contact-footer p {
+.article-item h3 {
     margin: 0;
-    color: #52616a;
-    font-size: 10px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    color: var(--navy);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.contact-footer a {
+.article-item h3 a {
+    text-decoration: none;
+    text-underline-offset: 4px;
+}
+
+.article-item h3 a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.article-meta {
+    margin: 7px 0 0;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .035em;
+}
+
+.article-excerpt {
+    max-width: 780px;
+    margin: 8px 0 0;
+    color: #52616A;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.all-articles-link {
+    align-self: flex-start;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: var(--contact-deep);
+    gap: 9px;
+    margin-top: 17px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
     text-decoration: none;
-    font: 500 15px "Cormorant Garamond", Georgia, serif;
 }
 
-.contact-footer a span {
-    font: 20px/1 Inter, sans-serif;
-}
-.contact-footer a:hover {
+.all-articles-link:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-@media (max-width: 800px) {
-    .contact-main {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
-    .contact-details-section {
-        border-top: 1px solid var(--contact-line);
-        border-left: 0;
-        padding: 36px 0 0;
-    }
+/* Three social links only */
+.social-strip {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    background: var(--pale-blue);
 }
 
-@media (max-width: 900px) {
-    .contact-header {
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+}
+
+.social-link {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 160ms ease, transform 160ms ease;
+}
+
+.social-link:hover {
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    display: block;
+    width: 27px;
+    height: 27px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social-link .icon-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-link:focus-visible,
+.all-articles-link:focus-visible,
+.site-footer a:focus-visible,
+.brand:focus-visible,
+.main-nav a:focus-visible,
+.ps-note summary:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 5px;
+}
+
+/* Closing thought */
+.keep-exploring {
+    padding: 35px clamp(24px, 8vw, 120px) 38px;
+    color: var(--off-white);
+    background: var(--navy);
+}
+
+.exploring-inner .section-kicker {
+    color: rgba(250, 250, 247, .65);
+}
+
+.exploring-inner h2 {
+    margin: 0;
+    color: var(--off-white);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(31px, 4vw, 42px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.exploring-inner > p:last-child {
+    margin: 8px 0 0;
+    color: rgba(250, 250, 247, .82);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Quiet explanatory note, collapsed by default */
+.ps-note {
+    padding: 0 clamp(24px, 8vw, 120px);
+    background: var(--off-white);
+    color: var(--blue);
+}
+
+.ps-note summary {
+    width: fit-content;
+    padding: 13px 0;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+.ps-note p {
+    max-width: 780px;
+    margin: 0;
+    padding: 0 0 16px 17px;
+    color: #52616A;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+/* Footer */
+.site-footer {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px clamp(24px, 8vw, 120px);
+    border-top: 1px solid var(--line);
+    background: var(--linen);
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.site-footer a {
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Responsive layouts */
+@media (max-width: 760px) {
+    .site-header {
+        padding: 0 22px;
+    }
+
+    .header-inner {
+        min-height: 72px;
         align-items: flex-start;
         flex-direction: column;
-        gap: 10px;
-        padding-top: 18px;
+        justify-content: center;
+        gap: 5px;
+        padding: 12px 0 10px;
     }
 
-    .contact-nav-links {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-        overflow-x: auto;
-    }
-
-    .contact-nav-links a {
-        padding: 10px 0 13px;
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 640px) {
-    .contact-header {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    .contact-brand {
+    .brand {
         font-size: 19px;
     }
 
-    .contact-nav-links {
-        justify-content: space-between;
-        gap: 10px;
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: clamp(13px, 3.5vw, 25px);
+        overflow-x: auto;
+        scrollbar-width: none;
     }
 
-    .contact-nav-links a {
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav a {
+        padding: 7px 0 5px;
         font-size: 9px;
     }
 
-    .contact-hero {
-        padding: 46px 24px 42px;
+    .hero {
+        min-height: 300px;
+        padding: 44px 26px;
     }
 
-    .contact-desk-illustration {
-        margin-top: 34px;
+    .hero-orbit-one {
+        right: -210px;
     }
 
-    .contact-hero-inner {
-        width: 100%;
-        max-width: none;
-        padding: 0;
+    .hero-orbit-two {
+        right: -145px;
     }
 
-    .contact-hero h1 {
-        font-size: clamp(42px, 11vw, 58px);
+    .articles-section {
+        padding: 38px 26px 34px;
     }
 
-    .contact-hero-copy {
-        margin-top: 18px;
-        font-size: 15px;
-        line-height: 1.55;
+    .article-archive {
+        max-height: 340px;
     }
 
-    .contact-main {
-        padding: 42px 24px;
+    .keep-exploring {
+        padding: 32px 26px 34px;
     }
 
-    .contact-email-section h2,
-    .contact-details-section h2 {
-        font-size: 38px;
+    .ps-note {
+        padding-right: 26px;
+        padding-left: 26px;
     }
 
-    .contact-footer {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-        padding: 18px 24px;
+    .site-footer {
+        padding-right: 26px;
+        padding-left: 26px;
     }
 }
 
+@media (max-width: 420px) {
+    .main-nav {
+        gap: 15px;
+    }
 
+    .main-nav a {
+        font-size: 8px;
+        letter-spacing: .045em;
+    }
 
-/* Mobile header and hero align with the Let's Collab responsive reference.
-   Scoped to contact selectors and mobile widths only. */
-@media (max-width: 900px) {
-    .contact-header {
+    .hero {
+        min-height: 320px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .social-links {
+        gap: 32px;
+    }
+
+    .site-footer {
         align-items: flex-start;
         flex-direction: column;
-        gap: 10px;
-        padding: 18px clamp(24px, 4.8vw, 76px) 0;
-    }
-    .contact-header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .contact-brand {
-        font-size: 20px;
-        letter-spacing: .15em;
-    }
-    .contact-nav-links {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    .contact-nav-links a {
-        padding: 10px 0 13px;
-        font-size: 10px;
+        justify-content: center;
+        gap: 7px;
     }
 }
-@media (max-width: 640px) {
-    .contact-hero {
-        padding: 46px clamp(24px, 4.8vw, 76px) 42px;
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behaviour: auto;
     }
-    .contact-hero-inner {
-        width: 100%;
-        max-width: none;
-        padding: 0;
+
+    *,
+    *::before,
+    *::after {
+        scroll-behaviour: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
     }
-    .contact-hero h1 {
-        font-size: clamp(42px, 11vw, 58px);
-        line-height: .98;
-    }
-    .contact-hero-copy {
-        margin-top: 18px;
-        font-size: 15px;
-        line-height: 1.55;
-    }
-}
-@media (max-width: 380px) {
-    .contact-brand { font-size: 17px; }
-    .contact-nav-links { gap: 8px; }
-    .contact-nav-links a { font-size: 9px; }
 }
