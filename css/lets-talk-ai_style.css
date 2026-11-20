@@ -114,7 +114,8 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: clamp(42px, 5vw, 62px) clamp(24px, 4.8vw, 76px);
+    /*padding: clamp(42px, 5vw, 62px) clamp(24px, 4.8vw, 76px);*/
+    padding: clamp(42px, 5vw, 62px) clamp(22px, 5vw, 76px);
     color: var(--off-white);
     background: var(--blue);
 }
@@ -123,7 +124,8 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 1120px;
+    /*max-width: 1120px;*/
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -228,16 +230,28 @@ body {
 
 /* Article archive */
 
-.articles-section {
+/*.articles-section {
     padding: 48px clamp(24px, 8vw, 120px) 42px;
+    background: var(--linen);
+}*/
+
+.articles-section {
+    padding: 48px clamp(22px, 5vw, 76px) 42px;
     background: var(--linen);
 }
 
-.section-inner {
+/*.section-inner {
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
+}*/
+
+.section-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
+
 
 .articles-inner {
     display: flex;
@@ -429,8 +443,14 @@ body {
 
 /* Closing thought */
 
-.keep-exploring {
+/*.keep-exploring {
     padding: 35px clamp(24px, 8vw, 120px) 38px;
+    color: var(--off-white);
+    background: var(--navy);
+}*/
+
+.keep-exploring {
+    padding: 35px clamp(22px, 5vw, 76px) 38px;
     color: var(--off-white);
     background: var(--navy);
 }
@@ -457,8 +477,14 @@ body {
 
 /* Quiet explanatory note, collapsed by default */
 
-.ps-note {
+/*.ps-note {
     padding: 0 clamp(24px, 8vw, 120px);
+    background: var(--off-white);
+    color: var(--blue);
+}*/
+
+.ps-note {
+    padding: 0 clamp(22px, 5vw, 76px);
     background: var(--off-white);
     color: var(--blue);
 }
@@ -484,7 +510,7 @@ body {
 
 /* Footer */
 
-.site-footer {
+/*.site-footer {
     min-height: 64px;
     display: flex;
     align-items: center;
@@ -493,6 +519,23 @@ body {
     padding: 14px clamp(24px, 8vw, 120px);
     border-top: 1px solid var(--line);
     background: var(--linen);
+}*/
+
+.site-footer {
+    padding: 14px clamp(22px, 5vw, 76px);
+    border-top: 1px solid var(--line);
+    background: var(--linen);
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 36px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .site-footer p {
