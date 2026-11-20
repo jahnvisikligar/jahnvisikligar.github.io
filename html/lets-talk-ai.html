@@ -46,9 +46,29 @@
                     <p class="section-intro">Ideas explored, concepts unpacked and lessons picked up along the way.</p>
                 </div>
 
-                <div class="article-archive" id="article-archive" tabindex="0" aria-label="Latest articles, scrollable">
-                    <p class="archive-status" id="archive-status" role="status">Loading the latest articles…</p>
-                    <div class="article-list" id="article-list"></div>
+                <div class="article-archive" id="article-archive" tabindex="0" aria-label="Published articles, scrollable">
+                    <div class="article-list">
+                        <article class="article-item">
+                            <h3><a href="https://letstalkai.hashnode.dev/a-world-imagined" target="_blank" rel="noopener noreferrer">A World Imagined</a></h3>
+                            <p class="article-meta">LET'S TALK AI · HASHNODE</p>
+                        </article>
+                        <article class="article-item">
+                            <h3><a href="https://letstalkai.hashnode.dev/how-to-build-a-langchain-pdf-qna-system" target="_blank" rel="noopener noreferrer">How to Build a LangChain PDF Q&amp;A System</a></h3>
+                            <p class="article-meta">LET'S TALK AI · HASHNODE</p>
+                        </article>
+                        <article class="article-item">
+                            <h3><a href="https://letstalkai.hashnode.dev/sentiment-analysis-with-bert-using-huggingface-and-streamlit" target="_blank" rel="noopener noreferrer">Sentiment Analysis with BERT Using Hugging Face and Streamlit</a></h3>
+                            <p class="article-meta">LET'S TALK AI · HASHNODE</p>
+                        </article>
+                        <article class="article-item">
+                            <h3><a href="https://letstalkai.hashnode.dev/smart-sensors-for-an-industrial-revolution-1" target="_blank" rel="noopener noreferrer">Smart Sensors for an Industrial Revolution</a></h3>
+                            <p class="article-meta">LET'S TALK AI · HASHNODE</p>
+                        </article>
+                        <article class="article-item">
+                            <h3><a href="https://letstalkai.hashnode.dev/building-a-career-in-ai" target="_blank" rel="noopener noreferrer">Building a Career in AI</a></h3>
+                            <p class="article-meta">LET'S TALK AI · HASHNODE</p>
+                        </article>
+                    </div>
                 </div>
 
                 <a class="all-articles-link" href="https://letstalkai.hashnode.dev/" target="_blank" rel="noopener noreferrer">View all articles on Hashnode <span aria-hidden="true">↗</span></a>
@@ -88,81 +108,5 @@
         <a href="#top"><span aria-hidden="true">↑</span> Back to the top</a>
     </footer>
 
-    <script>
-    (() => {
-        const feedUrl = "https://letstalkai.hashnode.dev/rss.xml";
-        const list = document.getElementById("article-list");
-        const status = document.getElementById("archive-status");
-        const archive = document.getElementById("article-archive");
-
-        const readingTime = (text) => {
-            const words = (text || "").trim().split(/\s+/).filter(Boolean).length;
-            return Math.max(1, Math.ceil(words / 220));
-        };
-
-        const cleanText = (html) => {
-            const doc = new DOMParser().parseFromString(html || "", "text/html");
-            return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
-        };
-
-        const formatDate = (value) => {
-            const date = new Date(value);
-            if (Number.isNaN(date.getTime())) return "";
-            return new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric" }).format(date);
-        };
-
-        const renderArticle = (item) => {
-            const title = item.querySelector("title")?.textContent?.trim() || "Untitled article";
-            const link = item.querySelector("link")?.textContent?.trim() || item.querySelector("link")?.getAttribute("href");
-            const date = item.querySelector("pubDate")?.textContent?.trim() || "";
-            const description = item.querySelector("description")?.textContent || item.getElementsByTagName("content:encoded")[0]?.textContent || "";
-            const summary = cleanText(description);
-            const article = document.createElement("article");
-            article.className = "article-item";
-
-            const heading = document.createElement("h3");
-            const anchor = document.createElement("a");
-            anchor.textContent = title;
-            anchor.href = link || "https://letstalkai.hashnode.dev/";
-            anchor.target = "_blank";
-            anchor.rel = "noopener noreferrer";
-            heading.appendChild(anchor);
-
-            const meta = document.createElement("p");
-            meta.className = "article-meta";
-            const dateText = formatDate(date);
-            const minutes = readingTime(summary);
-            meta.textContent = [dateText, minutes + " min read"].filter(Boolean).join("  ·  ");
-
-            article.append(heading, meta);
-            if (summary) {
-                const excerpt = document.createElement("p");
-                excerpt.className = "article-excerpt";
-                excerpt.textContent = summary.length > 230 ? summary.slice(0, 227).trimEnd() + "…" : summary;
-                article.appendChild(excerpt);
-            }
-            return article;
-        };
-
-        fetch(feedUrl, { headers: { "Accept": "application/rss+xml, application/xml, text/xml" } })
-            .then((response) => {
-                if (!response.ok) throw new Error("The article feed could not be reached.");
-                return response.text();
-            })
-            .then((xml) => {
-                const documentXml = new DOMParser().parseFromString(xml, "application/xml");
-                if (documentXml.querySelector("parsererror")) throw new Error("The article feed could not be read.");
-                const items = Array.from(documentXml.querySelectorAll("item"));
-                if (!items.length) throw new Error("No published articles were found in the feed.");
-                items.sort((a, b) => new Date(b.querySelector("pubDate")?.textContent || 0) - new Date(a.querySelector("pubDate")?.textContent || 0));
-                items.forEach((item) => list.appendChild(renderArticle(item)));
-                status.remove();
-            })
-            .catch(() => {
-                status.textContent = "The latest articles are available on Hashnode.";
-                status.classList.add("archive-fallback");
-            });
-    })();
-    </script>
 </body>
 </html>
