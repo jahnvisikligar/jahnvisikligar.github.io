@@ -14,7 +14,15 @@
 <body class="lta-page" id="top">
     <header class="site-header">
         <div class="header-inner">
-            <a class="brand" href="#top" aria-label="Let's Talk AI home">LET'S TALK AI<span class="brand-period"><!DOCTYPE html>
+            <!--<a class="brand" href="#top" aria-label="Let's Talk AI home">LET'S TALK AI<span class="brand-period"><!DOCTYPE html>-->
+            <a class="brand" href="#top" aria-label="Let's Talk AI home">
+                <img
+                    id="lets-talk-ai-logo"
+                    class="brand-logo"
+                    alt=""
+                >
+                <span>LET'S TALK AI<span class="brand-period">.</span></span>
+            </a>    
             <html lang="en">
             <head>
                 <meta charset="UTF-8">
@@ -129,6 +137,15 @@
             <a href="#top"><span aria-hidden="true">↑</span> Back to the top</a>
         </div>
     </footer>
+
+    <script src="../assets/lets-talk-ai-logo.js"></script>
+    <script>
+        const letsTalkAiLogo = document.getElementById("lets-talk-ai-logo");
+
+        if (letsTalkAiLogo && window.letsTalkAiLogoData) {
+            letsTalkAiLogo.src = window.letsTalkAiLogoData;
+        }
+    </script>
 
 </body>
 </html>
