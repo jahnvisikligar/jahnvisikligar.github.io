@@ -342,7 +342,7 @@ body {
     padding-left: 4px;
     color: var(--contact-primary);
 }
-
+/*
 .contact-link-icon {
     display: grid;
     place-items: center;
@@ -352,7 +352,25 @@ body {
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 24px;
     line-height: 1;
+}*/
+
+
+.contact-link-icon {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    color: var(--contact-primary);
+    line-height: 1;
 }
+
+.contact-link-icon svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
 
 .contact-link-copy {
     display: grid;
