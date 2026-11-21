@@ -314,3 +314,57 @@ a:focus-visible{
 
 
                         }
+
+/* Footer: enforce the exact Career-page icon treatment. */
+.career-footer .career-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.career-footer .career-footer-links > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #203F56;
+    text-decoration: none;
+}
+
+.career-footer .career-footer-links > a > svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    fill: none;
+    stroke: #203F56;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.career-footer .career-footer-links > a:hover {
+    color: #244A63;
+}
+
+.career-footer .career-footer-links .back-to-top {
+    color: #203F56;
+    font: 20px/1 Inter, sans-serif;
+    padding-left: 0;
+}
+
+@media (max-width: 760px) {
+    .career-footer {
+        align-items: center;
+        flex-direction: row;
+        gap: 14px;
+        padding: 12px 24px;
+    }
+
+    .career-footer .career-footer-links {
+        justify-content: flex-start;
+        gap: 14px;
+    }
+}
