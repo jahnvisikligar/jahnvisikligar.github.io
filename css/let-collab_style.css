@@ -247,40 +247,52 @@
                     }
 
 
-/* Footer quick links: matched to the Career page */
+.career-footer {
+    min-height: 56px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 12px var(--page-gutter);
+    border-top: 1px solid var(--line);
+    background: var(--white);
+    color: var(--blue-deep);
+}
+.career-footer p {
+    margin: 0;
+    color: var(--blue-deep);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.career-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.career-footer a {
+    color: var(--blue-deep);
+    text-decoration: none;
+}
+.career-footer a:hover { color: var(--blue); }
+.career-footer .back-to-top {
+    font: 20px/1 Inter, sans-serif;
+    padding-left: 0;
+}
+.career-footer-links svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 
-.site-footer .career-footer-links {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: flex-end;
-                                    flex-wrap: wrap;
-                                    gap: 18px;
-                                 }
-
-.site-footer .career-footer-links a {
-                                        color: #203F56;
-                                        text-decoration: none;
-                                    }
-
-.site-footer .career-footer-links a:hover {
-                                            color: #244A63;
-                                        }
-
-.site-footer .career-footer-links svg {
-                                            width: 16px;
-                                            height: 16px;
-                                            display: block;
-                                            fill: none;
-                                            stroke: currentColor;
-                                            stroke-width: 1.7;
-                                            stroke-linecap: round;
-                                            stroke-linejoin: round;
-                                        }
-
-.site-footer .career-footer-links .back-to-top {
-                                                    font: 20px/1 Inter, sans-serif;
-                                                    padding-left: 0;
-                                                }
 
 
              a:focus-visible{
