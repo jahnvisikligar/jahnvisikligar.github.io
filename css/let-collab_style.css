@@ -97,6 +97,7 @@
 .expertise-item{
                     min-height:150px;
                     padding:18px 10px 16px;
+                    background:var(--white);
                     border:1px solid var(--line);
                     border-radius:4px;
                     display:flex;
@@ -215,36 +216,54 @@
 .platform-description li{padding-left:2px}
 .platform-description li::marker{color:#7b9aab}
 
-.site-footer{
+.career-footer{
                 min-height:56px;
+                box-sizing:border-box;
                 display:flex;
                 align-items:center;
                 justify-content:space-between;
                 gap:24px;
                 padding:12px var(--page-gutter);
                 background:var(--white);
-                border-top:1px solid var(--line)
+                border-top:1px solid var(--line);
+                color:var(--blue-deep)
             }
-.site-footer p{
+.career-footer p{
                 margin:0;
-                color:#777b78;
+                color:var(--blue-deep);
                 font-size:10px;
                 letter-spacing:.08em;
-                text-transform:uppercase
+                text-transform:none
             }
-.site-footer a{
+.career-footer-links{
+                display:flex;
+                align-items:center;
+                justify-content:flex-end;
+                flex-wrap:wrap;
+                gap:18px
+            }
+.career-footer a{
                 display:inline-flex;
                 align-items:center;
-                gap:8px;
+                justify-content:center;
                 color:var(--blue-deep);
-                text-decoration:none;
-                font:500 15px "Cormorant Garamond",Georgia,serif
+                text-decoration:none
             }
-.site-footer a span{font:20px/1 Inter,sans-serif}
-.site-footer a:hover{
-                        text-decoration:underline;
-                        text-underline-offset:4px
-                    }
+.career-footer a:hover{color:var(--blue)}
+.career-footer .back-to-top{
+                font:20px/1 Inter,sans-serif;
+                padding-left:0
+            }
+.career-footer-links svg{
+                width:16px;
+                height:16px;
+                display:block;
+                fill:none;
+                stroke:currentColor;
+                stroke-width:1.7;
+                stroke-linecap:round;
+                stroke-linejoin:round
+            }
 a:focus-visible{
                     outline:2px solid #668ba3;
                     outline-offset:4px
@@ -320,10 +339,17 @@ a:focus-visible{
                                         }
                             .braintrust .platform-logo{font-size:42px}
                             
-                            .site-footer{
-                                            height:auto; 
-                                            min-height:56px; 
+                            .career-footer{
+                                            height:auto;
+                                            min-height:56px;
+                                            flex-direction:row;
+                                            flex-wrap:wrap;
+                                            gap:14px;
                                             padding:12px var(--page-gutter)
+                                        }
+                            .career-footer-links{
+                                            justify-content:flex-end;
+                                            gap:14px
                                         }
                         }
 @media(max-width:380px){
