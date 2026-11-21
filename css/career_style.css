@@ -19,14 +19,14 @@ body {
 }
 
 :root {
-    --paper: #FAFAF7;
-    --ivory: #F5F1E8;
-    --ink: #203F56;
-    --muted: #526776;
-    --blue: #244A63;
-    --blue-deep: #203F56;
-    --blue-soft: #244A63;
-    --line: rgba(32, 63, 86, .16);
+        --paper: #FAFAF7;
+        --ivory: #F5F1E8;
+        --ink: #203F56;
+        --muted: #526776;
+        --blue: #244A63;
+        --blue-deep: #203F56;
+        --blue-soft: #244A63;
+        --line: rgba(32, 63, 86, .16);
 }
 .site-header .navbar { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; width: 100%; }
 .career-entry-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
@@ -40,16 +40,50 @@ body {
 }
 .site-brand:focus-visible { outline: 2px solid var(--blue-soft); outline-offset: 5px; }
 .career-footer {
-    min-height: 56px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    padding: 12px clamp(24px, 4.8vw, 76px); border-top: 1px solid var(--line);
-    background: #FAFAF7; color: #203F56;
-}
-.career-footer p { margin: 0; color: #203F56; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
-.career-footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 18px; }
-.career-footer a { color: #203f56; text-decoration: none; }
+                    min-height: 56px; 
+                    box-sizing: border-box; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: space-between; 
+                    gap: 24px;
+                    padding: 12px clamp(24px, 4.8vw, 76px); 
+                    border-top: 1px solid var(--line);
+                    background: #FAFAF7; 
+                    color: #203F56;
+                }
+.career-footer p { 
+                    margin: 0; 
+                    color: #203F56; 
+                    font-size: 10px; 
+                    letter-spacing: .08em; 
+                    text-transform: uppercase; 
+                }
+.career-footer-links { 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: flex-end; 
+                        flex-wrap: wrap; 
+                        gap: 18px; 
+                    }
+.career-footer a { 
+                    color: #203f56; 
+                    text-decoration: none; 
+                }
 .career-footer a:hover { color: var(--blue-soft); }
-.career-footer .back-to-top { font: 20px/1 Inter, sans-serif; padding-left: 0; }
-.career-footer-links svg { width: 16px; height: 16px; display: block; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.career-footer .back-to-top { 
+                                font: 20px/1 Inter, sans-serif; 
+                                padding-left: 0; 
+                            }
+.career-footer-links svg { 
+                            width: 16px; 
+                            height: 16px; 
+                            display: block; 
+                            fill: none; 
+                            stroke: currentColor; 
+                            stroke-width: 1.7; 
+                            stroke-linecap: round; 
+                            stroke-linejoin: round; 
+                        }
 .career-header {
     min-height: 74px; box-sizing: border-box; padding: 0 clamp(24px, 4.8vw, 76px);
     border-bottom: 1px solid rgba(32,63,86,.16); background: #FAFAF7;
